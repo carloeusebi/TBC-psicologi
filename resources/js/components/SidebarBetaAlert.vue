@@ -8,7 +8,7 @@ const sidebar = useSidebar();
 
 <template>
     <SidebarGroup class="px-2 py-0">
-        <Alert v-if="sidebar.open.value" closable>
+        <Alert v-if="sidebar.open.value">
             <Info />
             <AlertTitle>Beta</AlertTitle>
             <AlertDescription> Quest'app è in fase di sviluppo. Per favore, segnala eventuali bug o feedback. </AlertDescription>

@@ -6,7 +6,7 @@ import SidebarBetaAlert from '@/components/SidebarBetaAlert.vue';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/vue3';
-import { LayoutGrid } from 'lucide-vue-next';
+import { BookOpenText, Github, LayoutGrid, List, ListChecks, ReceiptEuroIcon, Users } from 'lucide-vue-next';
 import AppLogo from './AppLogo.vue';
 
 const mainNavItems: NavItem[] = [
@@ -15,9 +15,40 @@ const mainNavItems: NavItem[] = [
         href: '/dashboard',
         icon: LayoutGrid,
     },
+    {
+        title: 'Pazienti',
+        href: '',
+        icon: Users,
+    },
+    {
+        title: 'Valutazioni',
+        href: '',
+        icon: ListChecks,
+    },
+    {
+        title: 'Fatture',
+        href: '',
+        icon: ReceiptEuroIcon,
+    },
+    {
+        title: 'Questionari',
+        href: '',
+        icon: List,
+    },
 ];
 
-const footerNavItems: NavItem[] = [];
+const footerNavItems: NavItem[] = [
+    {
+        title: 'Documentazione',
+        icon: BookOpenText,
+        href: '',
+    },
+    {
+        title: 'GitHub',
+        icon: Github,
+        href: 'https://github.com/carloeusebi/tbc-psicologi.git',
+    },
+];
 </script>
 
 <template>
