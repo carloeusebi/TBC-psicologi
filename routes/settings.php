@@ -23,8 +23,9 @@ Route::middleware('auth')->group(function (): void {
     })->name('appearance');
 
     Route::middleware(['verified'])->group(function (): void {
-        Route::get('impostazioni/abbonamento', [SubscriptionController::class, 'index'])->name('subscription');
+        Route::get('impostazioni/abbonamento', [SubscriptionController::class, 'index'])->name('subscription.index');
         Route::get('impostazioni/abbonamento/gestisci', [SubscriptionController::class, 'show'])->name('subscription.show');
         Route::get('impostazioni/abbonamento/modifica', [SubscriptionController::class, 'edit'])->name('subscription.edit');
+        Route::post('impostazioni/abbonamento/crea', [SubscriptionController::class, 'store'])->name('subscription.store');
     });
 });

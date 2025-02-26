@@ -23,7 +23,7 @@ const sidebarNavItems: NavItem[] = [
     },
     {
         title: 'Abbonamento',
-        href: route('subscription', {}, false),
+        href: route('subscription.index', {}, false),
     },
 ];
 

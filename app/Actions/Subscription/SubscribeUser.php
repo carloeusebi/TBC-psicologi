@@ -21,8 +21,8 @@ final class SubscribeUser
     {
         return $user->newSubscription('default', $price)
             ->checkout([
-                'success_url' => route('subscriptions.index'),
-                'cancel_url' => route('subscriptions.index'),
+                'success_url' => route('subscription.index'),
+                'cancel_url' => route('subscription.index'),
                 'locale' => 'it',
             ], [
                 'preferred_locales' => ['it'],

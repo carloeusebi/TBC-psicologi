@@ -6,7 +6,6 @@ namespace App\Models;
 
 use App;
 use App\Actions\Subscription\GetStripePlans;
-use App\Enums\PlanFeatures;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Laravel\Cashier\Subscription;
@@ -40,9 +39,9 @@ final class Plan extends Model
      */
     public function getRows(): array
     {
-        $stripe = App::make(GetStripePlans::class);
+        $getStripePlans = App::make(GetStripePlans::class);
 
-        return array_merge($this->basicPlan(), $stripe->handle());
+        return array_merge($getStripePlans->handle());
     }
 
     /**
@@ -97,36 +96,5 @@ final class Plan extends Model
     protected function sushiShouldCache(): bool
     {
         return true;
-    }
-
-    /**
-     * @return array<int, mixed>
-     */
-    private function basicPlan(): array
-    {
-        return [
-            [
-                'id' => 'basic',
-                'name' => 'Basic',
-                'description' => 'The basic plan',
-                'features' => json_encode([
-                    '2 Valutazioni al mese',
-                    'Pazienti illimitati',
-                    'Lorem Ipsum',
-                    'Lorem Ipsum',
-                    'Lorem Ipsum',
-                    'Lorem Ipsum',
-                ]),
-                'abilities' => json_encode([PlanFeatures::CREATE_EVALUATIONS->value => 2]),
-                'prices' => json_encode([
-                    'monthly' => 'Gratis',
-                    'yearly' => 'Gratis',
-                ]),
-                'pricesId' => json_encode([
-                    'monthly' => '',
-                    'yearly' => '',
-                ]),
-            ],
-        ];
     }
 }

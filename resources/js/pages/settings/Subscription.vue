@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import HeadingSmall from '@/components/HeadingSmall.vue';
-import TextLink from '@/components/TextLink.vue';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,7 +20,7 @@ const { subscription, plan } = defineProps<{
 const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Abbonamento',
-        href: route('subscription'),
+        href: route('subscription.index'),
     },
 ];
 
@@ -68,7 +67,6 @@ const gracePeriodEndsAt = computed(() => {
                             <h3 class="text-base font-medium">Piano</h3>
                             <p class="text-sm text-muted-foreground">Il tuo piano</p>
                         </div>
-                        <TextLink :href="route('subscription.edit')">Cambia piano</TextLink>
                     </div>
 
                     <Card>
@@ -80,6 +78,7 @@ const gracePeriodEndsAt = computed(() => {
                                 </Badge>
                             </CardTitle>
                             <CardDescription>{{ plan.prices[recurrence ?? 'monthly'] }}</CardDescription>
+                            <CardDescription>{{ plan.description }}</CardDescription>
                         </CardHeader>
                         <CardContent>
                             <ul class="space-y-1">
@@ -92,7 +91,7 @@ const gracePeriodEndsAt = computed(() => {
                     </Card>
                 </div>
                 <HeadingSmall title="Gestisci Abbonamento" description="Gestisci qui il tuo abbonamento">
-                    <a :href="route('subscription.show')">
+                    <a :href="route('subscription.edit')">
                         <Button variant="outline"> Gestisci Abbonamento</Button>
                     </a>
                 </HeadingSmall>

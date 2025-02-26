@@ -11,10 +11,8 @@ use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\URL;
 use Inertia\Inertia;
 use Inertia\Response;
-use Laravel\Cashier\Cashier;
 use Laravel\Cashier\Checkout;
 
 final class SubscriptionController
@@ -24,16 +22,11 @@ final class SubscriptionController
         return Inertia::render('settings/Subscription', [
             'plan' => $request->user()->plan(),
             'subscription' => $request->user()->subscription(),
-            'invoices' => Inertia::defer(fn () => $request->user()->invoices(parameters: ['limit' => 10])),
         ]);
     }
 
-    public function create(SubscriptionRequest $request, SubscribeUser $action): Checkout|RedirectResponse
+    public function store(SubscriptionRequest $request, SubscribeUser $action): Checkout|RedirectResponse
     {
-        if ($request->user()->hasStripeId() && $request->user()->subscribed()) {
-            return to_route('subscriptions.show');
-        }
-
         try {
             return $action->handle($request->user(), $request->input('price'));
         } catch (Exception $e) {
@@ -43,15 +36,16 @@ final class SubscriptionController
         }
     }
 
-    public function edit(Request $request): Response
+    public function edit(Request $request): Response|RedirectResponse
     {
+        if ($request->user()->subscribed()) {
+            return redirect()->route('subscription.show');
+        }
 
         return Inertia::render('Subscriptions', [
             'plans' => Plan::all(),
-            'secret' => Cashier::stripe()->customerSessions->create([
-                'customer' => $request->user()->stripe_id,
-                'components' => ['pricing_table' => ['enabled' => true]],
-            ])['client_secret'],
+            'currentPlan' => $request->user()->plan(),
+            'csrf_token' => csrf_token(),
         ]);
     }
 
@@ -62,7 +56,7 @@ final class SubscriptionController
         }
 
         return $request->user()->redirectToBillingPortal(
-            URL::previous(route('subscription')),
+            route('subscription.index'),
             ['locale' => 'it']
         );
     }
