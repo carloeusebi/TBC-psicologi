@@ -1,0 +1,19 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+
+parameters:
+
+    paths:
+        - app
+        - database/factories
+        - routes
+
+    # Level 10 is the highest level
+    level: 8
+
+    ignoreErrors:
+        # ignore errors from nullable models, because in controllers user is always logged in
+        - '#App\\Models\\User\|null#'
+
+        # - '#expects App\\Models\\User, Illuminate\\Contracts\\Auth\\Authenticatable\|null given.#'

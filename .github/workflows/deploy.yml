@@ -1,0 +1,16 @@
+name: deploy
+
+on:
+  workflow_run:
+    workflows: [ tests ]
+    types: [ completed ]
+    branches: [ main ]
+
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: Deployment Webhook
+        run: |
+          curl -X POST ${{ secrets.DEPLOYMENT_WEBHOOK }}
