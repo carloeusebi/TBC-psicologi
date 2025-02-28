@@ -4,30 +4,30 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use App;
-use App\Actions\Subscription\GetStripePlans;
+use Database\Factories\PlanFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Laravel\Cashier\Subscription;
 use Laravel\Cashier\SubscriptionItem;
-use Sushi\Sushi;
 
-/**
- * @property string $id
- * @property string $name
- * @property string $description
- * @property list<string> $features
- * @property array<string, int> $abilities
- * @property array<string, string> $prices
- * @property array<string, string> $pricesId
- */
 final class Plan extends Model
 {
-    use Sushi;
+    /** @use HasFactory<PlanFactory> */
+    use HasFactory;
 
-    public $incrementing = false;
+    public $timestamps = false;
 
-    protected $keyType = 'string';
+    protected $fillable = [
+        'stripe_id',
+        'name',
+        'description',
+        'features',
+        'abilities',
+    ];
+
+    protected $with = ['prices'];
 
     public static function basic(): self
     {
@@ -35,29 +35,11 @@ final class Plan extends Model
     }
 
     /**
-     * @return array<int, mixed>
+     * @return HasMany<Price, $this>
      */
-    public function getRows(): array
+    public function prices(): HasMany
     {
-        $getStripePlans = App::make(GetStripePlans::class);
-
-        return array_merge($getStripePlans->handle());
-    }
-
-    /**
-     * @return array<string, string>
-     */
-    public function getSchema(): array
-    {
-        return [
-            'id' => 'string',
-            'name' => 'string',
-            'description' => 'string',
-            'features' => 'json',
-            'abilities' => 'json',
-            'prices' => 'json',
-            'pricesId' => 'json',
-        ];
+        return $this->hasMany(Price::class);
     }
 
     /**
@@ -77,24 +59,15 @@ final class Plan extends Model
 
     /**
      * @return array{
-     *     features: 'array',
-     *     abilities: 'array',
-     *     prices: 'array',
-     *     pricesId: 'array',
+     *     features: 'json',
+     *     abilities: 'json',
      * }
      */
     protected function casts(): array
     {
         return [
-            'features' => 'array',
-            'abilities' => 'array',
-            'prices' => 'array',
-            'pricesId' => 'array',
+            'features' => 'json',
+            'abilities' => 'json',
         ];
-    }
-
-    protected function sushiShouldCache(): bool
-    {
-        return true;
     }
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Actions\Subscription;
 
-use App\Enums\PlanInterval;
+use App\Enums\PriceInterval;
 use Exception;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
@@ -35,8 +35,8 @@ final class GetStripePlans
 
             return $products->map(function (Product $product) use ($prices): array {
                 $productPrices = $prices->filter(fn ($price): bool => $price->product === $product->id);
-                $monthlyPrice = $productPrices->firstWhere('recurring.interval', PlanInterval::Monthly->label());
-                $yearlyPrice = $productPrices->firstWhere('recurring.interval', PlanInterval::Yearly->label());
+                $monthlyPrice = $productPrices->firstWhere('recurring.interval', PriceInterval::Monthly->label());
+                $yearlyPrice = $productPrices->firstWhere('recurring.interval', PriceInterval::Yearly->label());
 
                 return [
                     'id' => $product->id,
@@ -45,12 +45,12 @@ final class GetStripePlans
                     'features' => json_encode(array_map(fn (StripeObject $feature) => $feature->name, $product->features)), // @phpstan-ignore-line
                     'abilities' => $this->unwrapAbilities($product->metadata->toArray()),
                     'prices' => json_encode([
-                        PlanInterval::Monthly->value => Number::currency((float) $monthlyPrice?->unit_amount / 100, $monthlyPrice?->currency ?: config('cashier.currency')).'/mese',
-                        PlanInterval::Yearly->value => Number::currency((float) $yearlyPrice?->unit_amount / 100, $yearlyPrice?->currency ?: config('cashier.currency')).'/anno',
+                        PriceInterval::Monthly->value => Number::currency((float) $monthlyPrice?->unit_amount / 100, $monthlyPrice?->currency ?: config('cashier.currency')).'/mese',
+                        PriceInterval::Yearly->value => Number::currency((float) $yearlyPrice?->unit_amount / 100, $yearlyPrice?->currency ?: config('cashier.currency')).'/anno',
                     ]),
                     'pricesId' => json_encode([
-                        PlanInterval::Monthly->value => $monthlyPrice?->id,
-                        PlanInterval::Yearly->value => $yearlyPrice?->id,
+                        PriceInterval::Monthly->value => $monthlyPrice?->id,
+                        PriceInterval::Yearly->value => $yearlyPrice?->id,
                     ]),
                 ];
             })->jsonSerialize();
@@ -75,12 +75,12 @@ final class GetStripePlans
                 'features' => json_encode(['Feature 1', 'Feature 2']),
                 'abilities' => $this->unwrapAbilities(['abilities.create-evaluations' => '10']),
                 'prices' => json_encode([
-                    PlanInterval::Monthly->value => Number::currency(4.99, 'USD').'/mese',
-                    PlanInterval::Yearly->value => Number::currency(49.99, 'USD').'/anno',
+                    PriceInterval::Monthly->value => Number::currency(4.99, 'USD').'/mese',
+                    PriceInterval::Yearly->value => Number::currency(49.99, 'USD').'/anno',
                 ]),
                 'pricesId' => json_encode([
-                    PlanInterval::Monthly->value => 'price_1',
-                    PlanInterval::Yearly->value => 'price_2',
+                    PriceInterval::Monthly->value => 'price_1',
+                    PriceInterval::Yearly->value => 'price_2',
                 ]),
             ],
             [
@@ -90,12 +90,12 @@ final class GetStripePlans
                 'features' => json_encode(['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4']),
                 'abilities' => $this->unwrapAbilities(['abilities.create-evaluations' => '0']),
                 'prices' => json_encode([
-                    PlanInterval::Monthly->value => Number::currency(9.99, 'USD').'/mese',
-                    PlanInterval::Yearly->value => Number::currency(99.99, 'USD').'/anno',
+                    PriceInterval::Monthly->value => Number::currency(9.99, 'USD').'/mese',
+                    PriceInterval::Yearly->value => Number::currency(99.99, 'USD').'/anno',
                 ]),
                 'pricesId' => json_encode([
-                    PlanInterval::Monthly->value => 'price_1',
-                    PlanInterval::Yearly->value => 'price_2',
+                    PriceInterval::Monthly->value => 'price_1',
+                    PriceInterval::Yearly->value => 'price_2',
                 ]),
             ],
         ];

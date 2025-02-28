@@ -54,6 +54,22 @@ test('email verification status is unchanged when the email address is unchanged
     expect($user->refresh()->email_verified_at)->not->toBeNull();
 });
 
+test('user cannot change email address if registered with socialite', function () {
+    $user = User::factory()->google()->create(['email' => 'original@email.it']);
+
+    $response = actingAs($user)->get(route('profile.edit'));
+
+    $response->assertInertia(fn ($page) => $page
+        ->where('canChangeEmail', false)
+    );
+
+    actingAs($user)->patch(route('profile.update', ['name' => $user->name, 'email' => 'changed@email.it']));
+
+    expect($user->fresh())
+        ->email->toBe('original@email.it')
+        ->email_verified_at->not->toBeNull();
+});
+
 test('user can delete their account', function () {
     $user = User::factory()->create();
 

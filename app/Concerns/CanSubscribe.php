@@ -20,7 +20,7 @@ trait CanSubscribe
 
     public function hasPlan(string $plan): bool
     {
-        return $this->plan()->name === $plan || $this->plan()->id === $plan;
+        return $this->plan()->name === $plan || $this->plan()->stripe_id === $plan;
     }
 
     public function plan(): Plan
@@ -29,7 +29,7 @@ trait CanSubscribe
             ? $this->subscription()->items->first()?->stripe_product // @phpstan-ignore-line phpstan can't understand that item is SubscriptionItem
             : null;
 
-        return Plan::where('id', $stripeProduct)->first() ?? Plan::basic();
+        return Plan::where('stripe_id', $stripeProduct)->first() ?? Plan::basic();
     }
 
     /**

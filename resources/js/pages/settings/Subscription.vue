@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
-import type { BreadcrumbItem, Invoice, Plan, PlanInterval, Subscription } from '@/types';
+import type { BreadcrumbItem, Invoice, Plan, Subscription } from '@/types';
 import { Head } from '@inertiajs/vue3';
 import { format } from 'date-fns';
 import { Check } from 'lucide-vue-next';
@@ -26,22 +26,13 @@ const breadcrumbs: BreadcrumbItem[] = [
 
 const onGracePeriod = computed(() => subscription?.stripe_status === 'active' && subscription?.ends_at);
 
-const recurrence = computed(() => {
+const price = computed(() => {
     if (!subscription) {
-        return null;
+        return '0.00€/mese';
     }
 
-    let recurrence: null | PlanInterval = null;
-
-    const priceId = subscription.stripe_price;
-
-    if (plan.pricesId.monthly === priceId) {
-        recurrence = 'monthly';
-    } else if (plan.pricesId.yearly === priceId) {
-        recurrence = 'yearly';
-    }
-
-    return recurrence;
+    const price = plan.prices.find(({ stripe_id }) => stripe_id === subscription?.stripe_price);
+    return price?.label;
 });
 
 const gracePeriodEndsAt = computed(() => {
@@ -77,7 +68,7 @@ const gracePeriodEndsAt = computed(() => {
                                     Il tuo abbonamento scadrà il {{ gracePeriodEndsAt }}
                                 </Badge>
                             </CardTitle>
-                            <CardDescription>{{ plan.prices[recurrence ?? 'monthly'] }}</CardDescription>
+                            <CardDescription>{{ price }}</CardDescription>
                             <CardDescription>{{ plan.description }}</CardDescription>
                         </CardHeader>
                         <CardContent>

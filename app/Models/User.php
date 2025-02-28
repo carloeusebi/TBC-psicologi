@@ -38,6 +38,11 @@ final class User extends Authenticatable implements MustVerifyEmail
         'remember_token',
     ];
 
+    public function usingSocialite(): bool
+    {
+        return $this->google_id !== null;
+    }
+
     /**
      * Get the attributes that should be cast.
      *

@@ -4,10 +4,11 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import type { Plan } from '@/types';
-import { Head, Link } from '@inertiajs/vue3';
+import type { Plan, PriceInterval } from '@/types';
+import { Head, Link, usePage } from '@inertiajs/vue3';
 import { Check } from 'lucide-vue-next';
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
+import { toast, Toaster } from 'vue-sonner';
 
 const { currentPlan, csrf_token } = defineProps<{
     plans: Array<Plan>;
@@ -15,15 +16,30 @@ const { currentPlan, csrf_token } = defineProps<{
     csrf_token: string;
 }>();
 
+const { errors } = usePage().props;
+
 const selected = ref<Plan>(currentPlan);
+const selectedInterval = ref<PriceInterval>('month');
 
 const isCurrent = (plan: Plan) => plan.id === currentPlan.id;
 
 const currentIsSelected = computed(() => selected.value.id === currentPlan.id);
+
+const selectedPrice = computed(() => selected.value.prices.find(({ interval }) => interval === selectedInterval.value)?.label);
+
+onMounted(() => {
+    for (const key in errors) {
+        toast.error('Errore', {
+            description: errors[key],
+        });
+    }
+});
 </script>
 
 <template>
     <Head title="Piani" />
+
+    <Toaster rich-colors position="top-right" />
 
     <main class="divide-weak bg-default -mb-2 grid h-screen grid-cols-1 divide-x overflow-hidden text-sm *:overflow-y-auto md:grid-cols-2">
         <div class="mx-auto flex w-full max-w-xl flex-col items-start px-6">
@@ -56,7 +72,7 @@ const currentIsSelected = computed(() => selected.value.id === currentPlan.id);
                                             {{ plan.name }}
                                             <Badge v-if="isCurrent(plan)"> Piano attuale</Badge>
                                         </div>
-                                        <span class="text-right">{{ plan.prices.monthly }}</span>
+                                        <span class="text-right">{{ plan.prices.find(({ interval }) => interval === selectedInterval)?.label }}</span>
                                     </div>
                                     <div class="mt-1 flex justify-between gap-4">
                                         <p class="font-normal">{{ plan.description }}</p>
@@ -76,7 +92,7 @@ const currentIsSelected = computed(() => selected.value.id === currentPlan.id);
             <div class="flex w-full bg-gradient-to-t from-white from-[65%] to-transparent px-1 pb-8 pt-10">
                 <form method="POST" :action="route('subscription.store')" class="w-full">
                     <input type="hidden" name="_token" :value="csrf_token" />
-                    <input type="hidden" name="price" :value="selected.pricesId.monthly" />
+                    <input type="hidden" name="price" :value="selected.prices.find(({ interval }) => interval === selectedInterval).stripe_id" />
                     <Button :disabled="currentIsSelected" class="mt-10 inline w-full"> Passa a {{ selected.name }} </Button>
                 </form>
             </div>
@@ -94,7 +110,9 @@ const currentIsSelected = computed(() => selected.value.id === currentPlan.id);
                             <div>
                                 <div class="flex items-start justify-between gap-4">
                                     <div>{{ selected.name }}</div>
-                                    <div class="text-strong text-right">{{ selected.prices.monthly }}</div>
+                                    <div class="text-strong text-right">
+                                        {{ selectedPrice }}
+                                    </div>
                                 </div>
                             </div>
                         </div>

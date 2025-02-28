@@ -13,6 +13,7 @@ import SettingsLayout from '@/layouts/settings/Layout.vue';
 import { type BreadcrumbItem, type SharedData, type User } from '@/types';
 
 interface Props {
+    canChangeEmail: boolean;
     mustVerifyEmail: boolean;
     status?: string;
     className?: string;
@@ -67,6 +68,7 @@ const submit = () => {
                             required
                             autocomplete="username"
                             placeholder="Email address"
+                            :disabled="!canChangeEmail"
                         />
                         <InputError class="mt-2" :message="form.errors.email" />
                     </div>

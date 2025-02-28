@@ -1,0 +1,10 @@
+_HiStOrY_V2_
+Plan::first();
+q
+Plan::factory()->create();
+q
+Price::factory();
+App\134Models\134Price::factory()->create();
+q
+App\134Models\134Price::factory()->create();
+q

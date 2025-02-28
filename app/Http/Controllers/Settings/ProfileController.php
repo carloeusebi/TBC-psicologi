@@ -21,6 +21,7 @@ final class ProfileController extends Controller
     public function edit(Request $request): Response
     {
         return Inertia::render('settings/Profile', [
+            'canChangeEmail' => ! $request->user()->usingSocialite(),
             'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
             'status' => $request->session()->get('status'),
         ]);
@@ -33,7 +34,9 @@ final class ProfileController extends Controller
     {
         $request->user()->fill($request->validated());
 
-        if ($request->user()->isDirty('email')) {
+        if ($request->user()->usingSocialite()) {
+            $request->user()->email = $request->user()->getOriginal('email');
+        } elseif ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
 

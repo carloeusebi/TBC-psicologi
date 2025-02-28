@@ -1,3 +1,4 @@
+import type { PageProps } from '@inertiajs/core';
 import type { LucideIcon } from 'lucide-vue-next';
 
 export interface Auth {
@@ -18,7 +19,7 @@ export interface NavItem {
     hidden?: boolean;
 }
 
-export interface SharedData extends Record<string, unknown> {
+export interface SharedData extends PageProps {
     name: string;
     quote: { message: string; author: string };
     auth: Auth;
@@ -48,7 +49,7 @@ export interface User {
 
 export type BreadcrumbItemType = BreadcrumbItem;
 
-export type PlanInterval = 'monthly' | 'yearly';
+export type PriceInterval = 'month' | 'year';
 
 export interface SubscriptionItem {
     id: number;
@@ -76,14 +77,23 @@ export interface Subscription {
     items: SubscriptionItem[];
 }
 
+export interface Price {
+    id: number;
+    plan_id: number;
+    stripe_id: string;
+    interval: PriceInterval;
+    amount: number;
+    label: string;
+}
+
 export interface Plan {
-    id: string;
+    id: number;
+    stripe_id: string;
     name: string;
     description: string;
-    prices: Record<PlanInterval, string>;
-    pricesId: Record<PlanInterval, string>;
     features: Array<string>;
     abilities: Record<string, number>;
+    prices: Price[];
 }
 
 export interface Invoice extends Record<string, unknown> {
