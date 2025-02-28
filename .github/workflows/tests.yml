@@ -13,6 +13,9 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    env:
+      STRIPE_KEY: ${{ secrets.STRIPE_KEY }}
+      STRIPE_SECRET: ${{ secrets.STRIPE_SECRET }}
 
     steps:
       - name: Checkout
