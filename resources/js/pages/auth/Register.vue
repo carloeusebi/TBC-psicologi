@@ -4,6 +4,7 @@ import TextLink from '@/components/TextLink.vue';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Separator } from '@/components/ui/separator';
 import AuthBase from '@/layouts/AuthLayout.vue';
 import { Head, useForm } from '@inertiajs/vue3';
 import { LoaderCircle } from 'lucide-vue-next';
@@ -88,5 +89,14 @@ const submit = () => {
                 <TextLink :href="route('login')" class="underline underline-offset-4" :tabindex="6">Accedi</TextLink>
             </div>
         </form>
+
+        <Separator label="Oppure" />
+
+        <a :href="route('login.google')">
+            <Button type="button" variant="secondary" class="w-full" :tabindex="5" :disabled="form.processing">
+                <img src="/images/google-logo.svg" alt="Google" class="h-6 w-6" />
+                Accedi con Google
+            </Button>
+        </a>
     </AuthBase>
 </template>

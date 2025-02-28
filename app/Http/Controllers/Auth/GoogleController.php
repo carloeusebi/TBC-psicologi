@@ -36,11 +36,11 @@ final class GoogleController
             ], [
                 'name' => $googleUser->getName(),
                 'email' => $googleUser->getEmail(),
+                'avatar' => $googleUser->getAvatar(),
             ]);
 
             if ($user->wasRecentlyCreated) {
                 $user->markEmailAsVerified();
-                //                $user->profile_photo_path = $googleUser->getAvatar();
                 $user->save();
             }
 
@@ -48,7 +48,7 @@ final class GoogleController
 
             return redirect()->intended(route('dashboard'));
 
-        } catch (PDOException $e) {
+        } catch (PDOException) {
             return redirect()->route('login')->with('error', 'Indirizzo email già registrato.');
         }
     }
