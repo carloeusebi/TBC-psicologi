@@ -8,6 +8,7 @@ use App\Concerns\CanSubscribe;
 use Database\Factories\UserFactory;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -41,6 +42,14 @@ final class User extends Authenticatable implements MustVerifyEmail
     public function usingSocialite(): bool
     {
         return $this->google_id !== null;
+    }
+
+    /**
+     * @return HasMany<Patient, $this>
+     */
+    public function patients(): HasMany
+    {
+        return $this->hasMany(Patient::class);
     }
 
     /**

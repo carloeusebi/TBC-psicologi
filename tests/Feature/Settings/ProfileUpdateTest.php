@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Models\Patient;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -82,4 +83,20 @@ test('user can delete their account', function () {
 
     assertGuest();
     expect($user->fresh())->toBeNull();
+});
+
+test('deletes all related records', function () {
+    $user = User::factory()->create();
+    Patient::factory(3)->for($user)->create();
+
+    $response = actingAs($user)
+        ->delete(route('profile.destroy'));
+
+    $response
+        ->assertSessionHasNoErrors()
+        ->assertRedirect('/');
+
+    assertGuest();
+    expect($user->fresh())->toBeNull()
+        ->and(Patient::count())->toBe(0);
 });

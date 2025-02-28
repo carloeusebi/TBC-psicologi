@@ -17,7 +17,7 @@ const mainNavItems: NavItem[] = [
     },
     {
         title: 'Pazienti',
-        href: '',
+        href: route('patients.index'),
         icon: Users,
     },
     {

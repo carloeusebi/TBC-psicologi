@@ -47,6 +47,32 @@ export interface User {
     updated_at: string;
 }
 
+export interface Patient {
+    id: string;
+    first_name: string;
+    last_name: string;
+    name: string;
+    gender: string | null;
+    gender_label: string | null;
+    birth_date: string | null;
+    age: number | null;
+    birth_place: string | null;
+    address: string | null;
+    codice_fiscale: string | null;
+    therapy_start_date: string;
+    email: string | null;
+    phone: string | null;
+    weight: number | null;
+    height: number | null;
+    education: string | null;
+    job: string | null;
+    cohabitants: string | null;
+    drugs: string | null;
+    archived_at: string | null;
+    created_at: string;
+    updated_at: string;
+}
+
 export type BreadcrumbItemType = BreadcrumbItem;
 
 export type PriceInterval = 'month' | 'year';
@@ -103,4 +129,28 @@ export interface Invoice extends Record<string, unknown> {
     currency: string;
     paid: boolean;
     status: string;
+}
+
+export interface LaravelPaginatedResponse<T> {
+    data: Array<T>;
+    links: {
+        first: string;
+        last: string;
+        prev: string | null;
+        next: string | null;
+    };
+    meta: {
+        current_page: number;
+        from: number;
+        last_page: number;
+        links: Array<{
+            url: string | null;
+            label: string;
+            active: boolean;
+        }>;
+        path: string;
+        per_page: number;
+        to: number;
+        total: number;
+    };
 }

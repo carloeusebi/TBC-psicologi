@@ -14,6 +14,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     env:
+      DB_CONNECTION: sqlite
       STRIPE_KEY: ${{ secrets.STRIPE_KEY }}
       STRIPE_SECRET: ${{ secrets.STRIPE_SECRET }}
 

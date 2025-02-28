@@ -8,3 +8,16 @@ App\134Models\134Price::factory()->create();
 q
 App\134Models\134Price::factory()->create();
 q
+$u\040=\040User::first();
+Patient::factory(100)->for($u)->create();
+App\134Models|Patient::factory(100)->for($u)->create();
+App\134Models\134Patient::factory(100)->for($u)->create();
+clear
+User::all()->pluck('name');
+exit
+$u\040=\040User::first();
+App\134Models\134Patient::factory(100)->for($u)->create();
+q
+$u\040=\040User::first();
+App\134Models\134Patient::factory(100)->for($u)->create();
+q
