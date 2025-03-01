@@ -15,7 +15,7 @@
     @vite(['resources/js/app.ts'])
     @inertiaHead
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased" style="margin-bottom: -8px;">
 @inertia
 </body>
 </html>

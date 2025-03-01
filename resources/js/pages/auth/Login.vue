@@ -43,6 +43,15 @@ const { error } = usePage<SharedData>().props.flash;
             {{ error }}
         </div>
 
+        <a :href="route('login.google')">
+            <Button type="button" variant="outline" class="w-full" :tabindex="5" :disabled="form.processing">
+                <img src="/images/google-logo.svg" alt="Google" class="h-6 w-6" />
+                Accedi con Google
+            </Button>
+        </a>
+
+        <Separator label="Oppure" />
+
         <form @submit.prevent="submit" class="flex flex-col gap-6">
             <div class="grid gap-6">
                 <div class="grid gap-2">
@@ -64,8 +73,8 @@ const { error } = usePage<SharedData>().props.flash;
                     <div class="flex items-center justify-between">
                         <Label for="password">Password</Label>
                         <TextLink v-if="canResetPassword" :href="route('password.request')" class="text-sm" :tabindex="5"
-                            >Password dimenticata?</TextLink
-                        >
+                            >Password dimenticata?
+                        </TextLink>
                     </div>
                     <Input
                         id="password"
@@ -97,14 +106,5 @@ const { error } = usePage<SharedData>().props.flash;
                 <TextLink :href="route('register')" :tabindex="5">Registrati</TextLink>
             </div>
         </form>
-
-        <Separator label="Oppure" />
-
-        <a :href="route('login.google')">
-            <Button type="button" variant="secondary" class="w-full" :tabindex="5" :disabled="form.processing">
-                <img src="/images/google-logo.svg" alt="Google" class="h-6 w-6" />
-                Accedi con Google
-            </Button>
-        </a>
     </AuthBase>
 </template>

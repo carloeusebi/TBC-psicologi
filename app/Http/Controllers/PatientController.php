@@ -8,12 +8,12 @@ use App\Actions\Patient\CreatePatientAction;
 use App\Actions\Patient\DeletePatientAction;
 use App\Actions\Patient\UpdatePatientAction;
 use App\Enums\Gender;
-use App\Http\Requests\ListPatientsRequest;
 use App\Http\Requests\PatientRequest;
 use App\Http\Resources\PatientResource;
 use App\Models\Patient;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response as InertiaResponse;
 
@@ -21,13 +21,13 @@ final class PatientController extends Controller
 {
     use AuthorizesRequests;
 
-    public function index(ListPatientsRequest $request): InertiaResponse
+    public function index(Request $request): InertiaResponse
     {
         $this->authorize('viewAny', Patient::class);
 
         $patients = Patient::query()
             ->whereBelongsTo($request->user())
-            ->paginate($request->integer('per_page', 10));
+            ->get();
 
         return Inertia::render('patients/Index', [
             'patients' => PatientResource::collection($patients),

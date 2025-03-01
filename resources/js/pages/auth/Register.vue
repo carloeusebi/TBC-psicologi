@@ -27,6 +27,15 @@ const submit = () => {
     <AuthBase title="Crea un account" description="Crea un account per accedere a tutti i servizi disponibili">
         <Head title="Registrati" />
 
+        <a :href="route('login.google')">
+            <Button type="button" variant="secondary" class="w-full" :tabindex="5" :disabled="form.processing">
+                <img src="/images/google-logo.svg" alt="Google" class="h-6 w-6" />
+                Accedi con Google
+            </Button>
+        </a>
+
+        <Separator label="Oppure" />
+
         <form @submit.prevent="submit" class="flex flex-col gap-6">
             <div class="grid gap-6">
                 <div class="grid gap-2">
@@ -89,14 +98,5 @@ const submit = () => {
                 <TextLink :href="route('login')" class="underline underline-offset-4" :tabindex="6">Accedi</TextLink>
             </div>
         </form>
-
-        <Separator label="Oppure" />
-
-        <a :href="route('login.google')">
-            <Button type="button" variant="secondary" class="w-full" :tabindex="5" :disabled="form.processing">
-                <img src="/images/google-logo.svg" alt="Google" class="h-6 w-6" />
-                Accedi con Google
-            </Button>
-        </a>
     </AuthBase>
 </template>

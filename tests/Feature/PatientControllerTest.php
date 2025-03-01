@@ -16,9 +16,7 @@ it('list the patients', function () {
     actingAs($user)->get(route('patients.index'))
         ->assertOk()
         ->assertInertia(fn (Assert $page) => $page
-            ->has('patients.meta')
-            ->has('patients.links')
-            ->has('patients.data', 5)
+            ->has('patients', 5)
         );
 });
 
@@ -32,9 +30,7 @@ it('does not list other user\'s patients', function () {
     actingAs($user)->get(route('patients.index'))
         ->assertOk()
         ->assertInertia(fn (Assert $page) => $page
-            ->has('patients.meta')
-            ->has('patients.links')
-            ->has('patients.data', 5)
+            ->has('patients', 5)
         );
 });
 
