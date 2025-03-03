@@ -37,6 +37,9 @@ final class PatientResource extends JsonResource
             'job' => $this->job,
             'cohabitants' => $this->cohabitants,
             'drugs' => $this->drugs,
+
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ];
     }
 }

@@ -25,7 +25,7 @@ final class PatientFactory extends Factory
             'birth_date' => fake()->dateTimeBetween('-100 years', '-18 years'),
             'birth_place' => fake()->word(),
             'address' => fake()->address(),
-            'codice_fiscale' => fake()->word(),
+            'codice_fiscale' => fake()->codiceFiscale(), // @phpstan-ignore-line
             'therapy_start_date' => fake()->dateTimeBetween('-10 years'),
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->phoneNumber(),

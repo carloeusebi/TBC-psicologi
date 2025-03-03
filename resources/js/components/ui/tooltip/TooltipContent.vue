@@ -1,14 +1,20 @@
 <script setup lang="ts">
 import { cn } from '@/lib/utils';
-import { TooltipContent, TooltipPortal, useForwardPropsEmits, type TooltipContentEmits, type TooltipContentProps } from 'radix-vue';
+import {
+    TooltipContent,
+    TooltipPortal,
+    useForwardPropsEmits,
+    type TooltipContentEmits,
+    type TooltipContentProps
+} from 'radix-vue';
 import { computed, type HTMLAttributes } from 'vue';
 
 defineOptions({
-    inheritAttrs: false,
+    inheritAttrs: false
 });
 
-const props = withDefaults(defineProps<TooltipContentProps & { class?: HTMLAttributes['class'] }>(), {
-    sideOffset: 4,
+const props = withDefaults(defineProps<Partial<TooltipContentProps> & { class?: HTMLAttributes['class'] }>(), {
+    sideOffset: 4
 });
 
 const emits = defineEmits<TooltipContentEmits>();

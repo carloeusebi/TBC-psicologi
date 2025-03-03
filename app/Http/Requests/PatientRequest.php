@@ -23,7 +23,7 @@ final class PatientRequest extends FormRequest
             'birth_date' => ['nullable', 'date'],
             'birth_place' => ['nullable', 'max:255'],
             'address' => ['nullable', 'max:255'],
-            'codice_fiscale' => ['nullable'],
+            'codice_fiscale' => ['nullable', 'codice_fiscale'],
             'therapy_start_date' => [$this->isMethod('put') ? 'required' : 'nullable', 'date'],
             'email' => ['nullable', 'email', 'max:255'],
             'phone' => ['nullable', 'max:255'],

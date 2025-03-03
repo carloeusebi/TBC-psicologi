@@ -17,7 +17,7 @@ import type {
     VisibilityState,
 } from '@tanstack/vue-table';
 import { FlexRender, getCoreRowModel, getFilteredRowModel, getPaginationRowModel, getSortedRowModel, useVueTable } from '@tanstack/vue-table';
-import { useLocalStorage } from '@vueuse/core';
+import { useDebounceFn, useLocalStorage } from '@vueuse/core';
 
 interface DataTableProps {
     columns: ColumnDef<Patient>[];
@@ -32,12 +32,11 @@ const columnFilters = useLocalStorage<ColumnFiltersState>('dt.patients.column-fi
 const columnVisibility = useLocalStorage<VisibilityState>('dt.patients.visibility', {});
 const pagination = useLocalStorage<PaginationState>('dt.patients.pagination', { pageIndex: 1, pageSize: 10 });
 
-const fuzzyFilter: FilterFn<Patient> = (row, columnId, value, addMeta) => {
-    const itemRank = rankItem(row.getValue(columnId), value);
+const globalFilterFn: FilterFn<Patient> = (row, columnId, filterValue) => {
+    const terms = filterValue.toLowerCase().split(' ');
+    const patient = row.original;
 
-    addMeta({ itemRank });
-
-    return itemRank.passed;
+    return terms.every((term) => rankItem(patient.name.toLowerCase(), term).passed);
 };
 
 const table = useVueTable({
@@ -64,7 +63,7 @@ const table = useVueTable({
             return pagination.value;
         },
     },
-    globalFilterFn: fuzzyFilter,
+    globalFilterFn,
     onSortingChange: (updaterOrValue) => valueUpdater(updaterOrValue, sorting),
     onColumnVisibilityChange: (updaterOrValue) => valueUpdater(updaterOrValue, columnVisibility),
     onGlobalFilterChange: (updaterOrValue) => valueUpdater(updaterOrValue, globalFilter),
@@ -75,6 +74,10 @@ const table = useVueTable({
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
 });
+
+const updateFilter = useDebounceFn((value: string) => {
+    table.setGlobalFilter(value);
+}, 250);
 </script>
 
 <template>
@@ -84,7 +87,7 @@ const table = useVueTable({
                 placeholder="Filtra Pazienti..."
                 :model-value="table.getState().globalFilter"
                 class="h-8 w-full lg:w-[250px] xl:w-[500px]"
-                @input="table.setGlobalFilter(String($event.target.value))"
+                @input="updateFilter(String($event.target.value))"
                 @keyup.esc="table.resetGlobalFilter()"
             />
         </DataTableToolbar>
@@ -100,7 +103,7 @@ const table = useVueTable({
                 <TableBody class="[&>*:nth-child(odd)]:bg-muted/50">
                     <template v-if="table.getRowModel().rows?.length">
                         <template v-for="row in table.getRowModel().rows" :key="row.id">
-                            <Link :href="route('patients.show', row.original.id)" prefetch class="table-row">
+                            <Link :href="route('patients.show', { patient: row.original.id })" prefetch class="table-row">
                                 <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id">
                                     <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
                                 </TableCell>

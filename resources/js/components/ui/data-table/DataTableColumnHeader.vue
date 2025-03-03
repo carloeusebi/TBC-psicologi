@@ -12,7 +12,7 @@ import {
 import {
     ArrowDownWideNarrowIcon,
     ArrowUpNarrowWideIcon,
-    ArrowDownUpIcon,
+    ChevronsUpDown,
     EyeOffIcon,
     CircleXIcon
 } from 'lucide-vue-next';
@@ -43,7 +43,7 @@ export default {
                     <span>{{ title }}</span>
                     <ArrowDownWideNarrowIcon v-if="column.getIsSorted() === 'desc'" class="ml-2 h-4 w-4" />
                     <ArrowUpNarrowWideIcon v-else-if=" column.getIsSorted() === 'asc'" class="ml-2 h-4 w-4" />
-                    <ArrowDownUpIcon v-else class="ml-2 h-4 w-4" />
+                    <ChevronsUpDown v-else class="ml-2 h-4 w-4" />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">

@@ -39,10 +39,7 @@ export const columns: ColumnDef<Patient>[] = [
     },
     {
         id: 'actions',
-        cell: ({ row }) =>
-            h(DataTableRowActions, {
-                row,
-                actions,
-            }),
+        cell: ({ row }) => h(DataTableRowActions, { row, actions }),
+        enableGlobalFilter: false,
     },
 ];

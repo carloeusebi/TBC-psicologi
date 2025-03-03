@@ -41,11 +41,11 @@ onMounted(() => {
 
     <Toaster rich-colors position="top-right" />
 
-    <main class="divide-weak bg-default -mb-2 grid h-screen grid-cols-1 divide-x overflow-hidden text-sm *:overflow-y-auto md:grid-cols-2">
+    <main class="divide-weak -mb-2 grid h-screen grid-cols-1 divide-x overflow-hidden text-sm *:overflow-y-auto md:grid-cols-2">
         <div class="mx-auto flex w-full max-w-xl flex-col items-start px-6">
             <div class="sticky top-0 z-30 -mx-1 w-[calc(100%+0.5rem)]">
                 <div class="sticky top-0 z-30 -mx-1 w-[calc(100%+0.5rem)]">
-                    <div class="flex w-full bg-gradient-to-b from-white from-[75%] to-transparent px-1 py-10">
+                    <div class="flex w-full bg-gradient-to-b from-background from-[75%] to-transparent px-1 py-10">
                         <Link :href="route('subscription.index')" class="flex items-center gap-2">
                             <AppLogo />
                         </Link>
@@ -89,10 +89,10 @@ onMounted(() => {
                     </RadioGroup>
                 </div>
             </div>
-            <div class="flex w-full bg-gradient-to-t from-white from-[65%] to-transparent px-1 pb-8 pt-10">
+            <div class="flex w-full bg-gradient-to-t from-background from-[65%] to-transparent px-1 pb-8 pt-10">
                 <form method="POST" :action="route('subscription.store')" class="w-full">
                     <input type="hidden" name="_token" :value="csrf_token" />
-                    <input type="hidden" name="price" :value="selected.prices.find(({ interval }) => interval === selectedInterval).stripe_id" />
+                    <input type="hidden" name="price" :value="selected.prices.find(({ interval }) => interval === selectedInterval)?.stripe_id" />
                     <Button :disabled="currentIsSelected" class="mt-10 inline w-full"> Passa a {{ selected.name }} </Button>
                 </form>
             </div>

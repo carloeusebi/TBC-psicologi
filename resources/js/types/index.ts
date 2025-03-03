@@ -1,4 +1,5 @@
 import type { PageProps } from '@inertiajs/core';
+import { useForm } from 'laravel-precognition-vue-inertia';
 import type { LucideIcon } from 'lucide-vue-next';
 
 export interface Auth {
@@ -31,9 +32,9 @@ export interface SharedData extends PageProps {
         routes: Record<string, string>;
     };
     flash: {
-        success: string;
-        error: string;
-        info: string;
+        success: string | null;
+        error: string | null;
+        info: string | null;
     };
 }
 
@@ -71,6 +72,8 @@ export interface Patient {
     archived_at: string | null;
     created_at: string;
     updated_at: string;
+
+    evaluations_count?: number;
 }
 
 export type BreadcrumbItemType = BreadcrumbItem;
@@ -130,6 +133,8 @@ export interface Invoice extends Record<string, unknown> {
     paid: boolean;
     status: string;
 }
+
+export type PrecognitionForm = ReturnType<typeof useForm>;
 
 export interface LaravelPaginatedResponse<T> {
     data: Array<T>;

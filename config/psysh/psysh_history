@@ -24,3 +24,6 @@ q
 $u\040=\040User::first();
 App\134Models\134Patient::factory(100)->for($u)->create();
 exit
+$u\040=\040User::first();
+Patient::factory(300)->for($u)->create();
+q
