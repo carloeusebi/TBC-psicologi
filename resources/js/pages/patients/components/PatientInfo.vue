@@ -205,8 +205,11 @@ defineExpose({ form });
                     <div>
                         <Label>Ultima modifica</Label>
                         <div class="text-sm text-muted-foreground">
-                            {{ formatDistanceToNow(patient.updated_at, { addSuffix: true }) }}
-                            <span class="text-xs">({{ format(patient.updated_at, 'd MMMM y') }})</span>
+                            <span v-if="patient.updated_at !== patient.created_at">
+                                {{ formatDistanceToNow(patient.updated_at, { addSuffix: true }) }}
+                                <span class="text-xs">({{ format(patient.updated_at, 'd MMMM y') }})</span>
+                            </span>
+                            <span v-else>-</span>
                         </div>
                     </div>
                 </CardContent>
