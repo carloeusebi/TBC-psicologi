@@ -26,13 +26,13 @@ interface DataTableProps {
 
 const props = defineProps<DataTableProps>();
 
-const sorting = useLocalStorage<SortingState>('dt.patients.sorting', []);
+const sorting = useLocalStorage<SortingState>('dt.patients.sorting', [{ id: 'therapy_start_date', desc: true }]);
 const globalFilter = useLocalStorage<GlobalFilterTableState>('dt.patients.global-filter', '');
 const columnFilters = useLocalStorage<ColumnFiltersState>('dt.patients.column-filters', []);
 const columnVisibility = useLocalStorage<VisibilityState>('dt.patients.visibility', {});
-const pagination = useLocalStorage<PaginationState>('dt.patients.pagination', { pageIndex: 1, pageSize: 10 });
+const pagination = useLocalStorage<PaginationState>('dt.patients.pagination', { pageIndex: 0, pageSize: 10 });
 
-const globalFilterFn: FilterFn<Patient> = (row, columnId, filterValue) => {
+const globalFilterFn: FilterFn<Patient> = (row, _, filterValue) => {
     const terms = filterValue.toLowerCase().split(' ');
     const patient = row.original;
 
@@ -103,7 +103,7 @@ const updateFilter = useDebounceFn((value: string) => {
                 <TableBody class="[&>*:nth-child(odd)]:bg-muted/50">
                     <template v-if="table.getRowModel().rows?.length">
                         <template v-for="row in table.getRowModel().rows" :key="row.id">
-                            <Link :href="route('patients.show', { patient: row.original.id })" prefetch class="table-row">
+                            <Link :href="route('patients.show', { patient: row.original.id })" prefetch class="table-row hover:!bg-muted">
                                 <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id">
                                     <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
                                 </TableCell>

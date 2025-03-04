@@ -141,7 +141,12 @@ defineExpose({ form });
                     <CardDescription> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. </CardDescription>
                 </CardHeader>
                 <CardContent class="grid grid-cols-1 gap-2 md:grid-cols-3">
-                    <PrecognitiveDatePicker name="therapy_start_date" v-model="form.therapy_start_date" label="Data Inizio Terapia" />
+                    <PrecognitiveDatePicker
+                        name="therapy_start_date"
+                        v-model="form.therapy_start_date"
+                        label="Data Inizio Terapia"
+                        :max-value="today(getLocalTimeZone())"
+                    />
                     <PrecognitiveInput name="education" v-model="form.education" label="Istruzione" :icon="GraduationCap" />
                     <PrecognitiveInput name="job" v-model="form.job" label="Lavoro" :icon="BriefcaseBusiness" />
                     <PrecognitiveTagsInput

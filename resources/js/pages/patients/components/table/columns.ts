@@ -10,32 +10,30 @@ export const columns: ColumnDef<Patient>[] = [
     {
         accessorKey: 'first_name',
         header: ({ column }) => h(DataTableColumnHeader, { column, title: 'Nome' }),
-        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.getValue('first_name')),
+        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.original.first_name),
         enableHiding: false,
     },
     {
         accessorKey: 'last_name',
         header: ({ column }) => h(DataTableColumnHeader, { column, title: 'Cognome' }),
-        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.getValue('last_name')),
+        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.original.last_name),
         enableHiding: false,
     },
     {
         accessorKey: 'email',
         header: ({ column }) => h(DataTableColumnHeader, { column, title: 'Email' }),
-        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.getValue('email')),
+        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.original.email),
+        enableSorting: false,
     },
     {
         accessorKey: 'age',
-        id: 'età',
         header: ({ column }) => h(DataTableColumnHeader, { column, title: 'Età' }),
-        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.getValue('età')),
+        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.original.age),
     },
     {
         accessorKey: 'therapy_start_date',
-        accessorFn: (row) => (row.therapy_start_date ? format(row.therapy_start_date, 'd MMMM y') : null),
-        id: 'Data Inizio Terapia',
         header: ({ column }) => h(DataTableColumnHeader, { column, title: 'Data di inizio Terapia' }),
-        cell: (row) => h('span', { class: 'truncate font-medium' }, row.getValue()),
+        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, format(row.original.therapy_start_date, ' d MMMM y')),
     },
     {
         id: 'actions',

@@ -103,7 +103,7 @@ const formatter = useDateFormatter('it');
                     </SelectTrigger>
                     <SelectContent class="max-h-[200px]">
                         <SelectItem
-                            v-for="yearValue in createDecade({ dateObj: today(getLocalTimeZone()), startIndex: -100, endIndex: 10, step: 1 })"
+                            v-for="yearValue in createDecade({ dateObj: today(getLocalTimeZone()), startIndex: -100, endIndex: 0})"
                             :key="yearValue.toString()" :value="yearValue.year.toString()"
                         >
                             {{ yearValue.year }}

@@ -83,7 +83,7 @@ const gracePeriodEndsAt = computed(() => {
                 </div>
                 <HeadingSmall title="Gestisci Abbonamento" description="Gestisci qui il tuo abbonamento">
                     <a :href="route('subscription.edit')">
-                        <Button variant="outline"> Gestisci Abbonamento</Button>
+                        <Button variant="outline" class="mt-2 md:mt-0"> Gestisci Abbonamento</Button>
                     </a>
                 </HeadingSmall>
             </div>
