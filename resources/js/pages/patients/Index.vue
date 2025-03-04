@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button';
 import AppLayout from '@/layouts/AppLayout.vue';
+import CreatePatient from '@/pages/patients/components/CreatePatient.vue';
 import { BreadcrumbItem, Patient } from '@/types';
 import { Head } from '@inertiajs/vue3';
 import { columns } from './components/table/columns';
@@ -29,7 +29,7 @@ const breadcrumbs: BreadcrumbItem[] = [
                     <p class="text-muted-foreground">Ecco una lista dei pazienti attivi</p>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <Button> Aggiungi Paziente</Button>
+                    <CreatePatient />
                 </div>
             </div>
             <DataTable :data="patients" :columns="columns" />

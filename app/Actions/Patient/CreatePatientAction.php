@@ -11,6 +11,11 @@ final class CreatePatientAction
 {
     public function handle(PatientRequest $request): Patient
     {
-        return $request->user()->patients()->create($request->validated());
+        return $request->user()->patients()->create(
+            array_merge(
+                $request->validated(),
+                ['therapy_start_date' => today()],
+            )
+        );
     }
 }

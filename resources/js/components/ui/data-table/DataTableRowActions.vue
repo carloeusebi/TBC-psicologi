@@ -5,30 +5,21 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuRadioGroup,
-    DropdownMenuRadioItem,
     DropdownMenuSeparator,
-    DropdownMenuShortcut,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
     DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { EllipsisIcon } from 'lucide-vue-next';
+import { TableAction } from '@/types';
 
 defineProps<{
     row: Row<any>;
-    actions: Array<{
-        label: string;
-        icon?: Component;
-        onClick?: (row: Row<any>) => void;
-    }>;
+    actions: Array<Array<TableAction<any>>>;
 }>();
 
 </script>
 
 <template>
-    <DropdownMenu>
+    <DropdownMenu :modal="false">
         <DropdownMenuTrigger as-child>
             <Button
                 variant="ghost"
@@ -39,11 +30,14 @@ defineProps<{
             </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-            <template v-for="action in actions" :key="action.label">
-                <DropdownMenuItem @click="action.onClick(row)">
-                    <Component v-if="action.icon" :is="action.icon" class="h-4 w-4 mr-2" />
-                    {{ action.label }}
-                </DropdownMenuItem>
+            <template v-for="(actionGroup, index) in actions" :key="index">
+                <template v-for="action in actionGroup" :key="action.label">
+                    <DropdownMenuItem @click="action.onClick(row.original)" :class="action.class">
+                        <Component v-if="action.icon" :is="action.icon" class="size-4 mr-2" />
+                        {{ action.label }}
+                    </DropdownMenuItem>
+                </template>
+                <DropdownMenuSeparator v-if="index < (actions.length - 1)" />
             </template>
         </DropdownMenuContent>
     </DropdownMenu>

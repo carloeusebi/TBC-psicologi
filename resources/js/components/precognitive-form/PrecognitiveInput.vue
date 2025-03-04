@@ -14,6 +14,7 @@ const props = withDefaults(
         iconPosition?: 'before' | 'after';
         containerClass?: HTMLAttributes['class'];
         inputClass?: HTMLAttributes['class'];
+        required?: boolean;
     }>(),
     {
         iconPosition: 'before',
@@ -46,7 +47,10 @@ const inputClasses = computed(() => {
 
 <template>
     <div :class="containerClass">
-        <Label v-if="label" :for="name" :class="{ 'text-red-500': form?.invalid(name) }">{{ label }}</Label>
+        <Label v-if="label" :for="name" :class="{ 'text-red-500': form?.invalid(name) }">
+            {{ label }}
+            <span v-if="required" class="text-red-500">*</span>
+        </Label>
         <div class="relative">
             <Input :id="name" :placeholder v-model.trim="modelValue" @input="form?.validate(name)" :class="inputClasses" />
             <span

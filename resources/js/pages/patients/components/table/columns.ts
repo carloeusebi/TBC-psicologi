@@ -4,7 +4,7 @@ import { Patient } from '@/types';
 import type { ColumnDef } from '@tanstack/vue-table';
 import { format } from 'date-fns';
 import { h } from 'vue';
-import { actions } from './actions';
+import { actions } from '../../actions';
 
 export const columns: ColumnDef<Patient>[] = [
     {

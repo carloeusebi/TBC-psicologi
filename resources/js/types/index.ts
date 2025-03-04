@@ -1,7 +1,7 @@
 import type { PageProps } from '@inertiajs/core';
-import { Form } from 'laravel-precognition-vue-inertia/dist/types';
+import { Form, FormDataConvertible } from 'laravel-precognition-vue-inertia/dist/types';
 import type { LucideIcon } from 'lucide-vue-next';
-import { type Component } from 'vue';
+import { type Component, HTMLAttributes } from 'vue';
 
 export interface Auth {
     user: User;
@@ -49,7 +49,7 @@ export interface User {
     updated_at: string;
 }
 
-export interface Patient {
+export interface Patient extends Record<string, FormDataConvertible> {
     id: string;
     first_name: string;
     last_name: string;
@@ -137,10 +137,11 @@ export interface Invoice extends Record<string, unknown> {
 
 export type PrecognitionForm = Form<Record<string, unknown>>;
 
-export interface TableAction {
+export interface TableAction<T> {
     label: string;
     icon?: Component;
-    onClick: VoidFunction;
+    onClick: (target: T) => void;
+    class?: HTMLAttributes['class'];
 }
 
 export interface LaravelPaginatedResponse<T> {

@@ -40,9 +40,21 @@ it('can store a patient', function () {
     $data = Patient::factory()->withoutParents()->make();
 
     actingAs($user)->post(route('patients.store'), $data->toArray())
-        ->assertRedirectToRoute('patients.show', $patient = Patient::firstOrFail());
+        ->assertRedirectToRoute('patients.show', $patient = Patient::firstOrFail())
+        ->assertSessionHas('success', 'Paziente creato con successo.');
 
     expect($patient->user_id)->toBe($user->id);
+});
+
+it('defaults therapy start date to today', function () {
+    $user = User::factory()->create();
+    $data = Patient::factory()->withoutParents()->make(['therapy_start_date' => null]);
+
+    actingAs($user)->post(route('patients.store'), $data->toArray())
+        ->assertRedirectToRoute('patients.show', $patient = Patient::firstOrFail())
+        ->assertSessionHas('success', 'Paziente creato con successo.');
+
+    expect($patient->therapy_start_date->format('d/m/Y'))->toBe(today()->format('d/m/Y'));
 });
 
 it('show a patient', function () {
@@ -77,7 +89,7 @@ it('can update a patient', function () {
 
     actingAs($patient->user)->put(route('patients.update', $patient), $data->toArray())
         ->assertRedirectToRoute('patients.show', $patient)
-        ->assertSessionHas('success', 'Paziente aggiornato.');
+        ->assertSessionHas('success', 'Paziente modificato con successo.');
 
     expect($patient->refresh())
         ->first_name->toBe($data->first_name)
@@ -103,7 +115,7 @@ it('can delete a patient', function () {
 
     actingAs($patient->user)->delete(route('patients.destroy', $patient))
         ->assertRedirectToRoute('patients.index')
-        ->assertSessionHas('success', 'Paziente eliminato.');
+        ->assertSessionHas('success', 'Paziente eliminato con successo.');
 
     expect(Patient::find($patient->id))->toBeNull();
 });

@@ -37,7 +37,7 @@ const { patient } = defineProps<{
     genders: Array<{ value: string; label: string }>;
 }>();
 
-const form = useForm('put', route('patients.update', { patient: patient.id }), { ...patient });
+const form = useForm<Patient>('put', route('patients.update', { patient: patient.id }), { ...patient });
 
 let resolvePromise: (value: string) => void;
 let rejectPromise: (reason?: any) => void;

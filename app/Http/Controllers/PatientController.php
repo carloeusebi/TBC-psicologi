@@ -42,7 +42,8 @@ final class PatientController extends Controller
 
         $patient = $action->handle($request);
 
-        return to_route('patients.show', $patient);
+        return to_route('patients.show', $patient)
+            ->with('success', 'Paziente creato con successo.');
     }
 
     public function show(Patient $patient): InertiaResponse
@@ -61,7 +62,7 @@ final class PatientController extends Controller
 
         $patient = $action->handle($patient, $request);
 
-        return to_route('patients.show', $patient)->with('success', 'Paziente aggiornato.');
+        return to_route('patients.show', $patient)->with('success', 'Paziente modificato con successo.');
     }
 
     public function destroy(Patient $patient, DeletePatientAction $action): RedirectResponse
@@ -70,6 +71,6 @@ final class PatientController extends Controller
 
         $action->handle($patient);
 
-        return to_route('patients.index')->with('success', 'Paziente eliminato.');
+        return to_route('patients.index')->with('success', 'Paziente eliminato con successo.');
     }
 }
