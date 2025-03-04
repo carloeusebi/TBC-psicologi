@@ -27,18 +27,11 @@ final class PatientController extends Controller
 
         $patients = Patient::query()
             ->whereBelongsTo($request->user())
+            ->latest()
             ->get();
 
         return Inertia::render('patients/Index', [
             'patients' => PatientResource::collection($patients),
-        ]);
-    }
-
-    public function create(): InertiaResponse
-    {
-        $this->authorize('create', Patient::class);
-
-        return Inertia::render('patients/Create', [
             'genders' => Gender::options(),
         ]);
     }

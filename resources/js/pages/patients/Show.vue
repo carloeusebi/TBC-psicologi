@@ -11,7 +11,7 @@ type Tab = 'profile' | 'evaluations' | 'invoices' | 'documents';
 
 const { patient } = defineProps<{
     patient: Patient;
-    genders: Array<{ key: string; label: string }>;
+    genders: Array<{ value: string; label: string }>;
 }>();
 
 const breadcrumbs: BreadcrumbItem[] = [

@@ -34,7 +34,7 @@ import { toast } from 'vue-sonner';
 
 const { patient } = defineProps<{
     patient: Patient;
-    genders: Array<{ key: string; label: string }>;
+    genders: Array<{ value: string; label: string }>;
 }>();
 
 const form = useForm('put', route('patients.update', { patient: patient.id }), { ...patient });
@@ -97,7 +97,7 @@ const removeRouterListener = router.on('before', (e) => {
     }
 
     return false;
-}) as () => void;
+});
 
 onBeforeUnmount(() => {
     dismissFormToast();

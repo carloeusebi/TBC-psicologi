@@ -14,7 +14,7 @@ withDefaults(
         optionLabel?: string;
     }>(),
     {
-        optionValue: 'key',
+        optionValue: 'value',
         optionLabel: 'label',
     },
 );

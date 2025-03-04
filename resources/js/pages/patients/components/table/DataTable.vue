@@ -103,7 +103,7 @@ const updateFilter = useDebounceFn((value: string) => {
                 <TableBody class="[&>*:nth-child(odd)]:bg-muted/50">
                     <template v-if="table.getRowModel().rows?.length">
                         <template v-for="row in table.getRowModel().rows" :key="row.id">
-                            <Link :href="route('patients.show', { patient: row.original.id })" prefetch class="table-row hover:!bg-muted">
+                            <Link :href="route('patients.show', row.original.id)" prefetch class="table-row hover:!bg-muted">
                                 <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id">
                                     <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
                                 </TableCell>

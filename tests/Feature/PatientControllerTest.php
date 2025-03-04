@@ -17,6 +17,7 @@ it('list the patients', function () {
         ->assertOk()
         ->assertInertia(fn (Assert $page) => $page
             ->has('patients', 5)
+            ->where('genders', Gender::options())
         );
 });
 
@@ -31,15 +32,6 @@ it('does not list other user\'s patients', function () {
         ->assertOk()
         ->assertInertia(fn (Assert $page) => $page
             ->has('patients', 5)
-        );
-});
-
-it('renders the create page', function () {
-    actingAs(User::factory()->create())->get(route('patients.create'))
-        ->assertOk()
-        ->assertInertia(fn (Assert $page) => $page
-            ->has('genders')
-            ->where('genders', Gender::options())
         );
 });
 
@@ -59,6 +51,7 @@ it('show a patient', function () {
     actingAs($patient->user)->get(route('patients.show', $patient))
         ->assertOk()
         ->assertInertia(fn (Assert $page) => $page
+            ->where('genders', Gender::options())
             ->where('patient.id', $patient->id)
             ->where('patient.first_name', $patient->first_name)
             ->where('patient.last_name', $patient->last_name)

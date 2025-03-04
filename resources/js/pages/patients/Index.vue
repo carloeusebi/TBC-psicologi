@@ -2,12 +2,13 @@
 import { Button } from '@/components/ui/button';
 import AppLayout from '@/layouts/AppLayout.vue';
 import { BreadcrumbItem, Patient } from '@/types';
-import { Head, Link } from '@inertiajs/vue3';
+import { Head } from '@inertiajs/vue3';
 import { columns } from './components/table/columns';
 import DataTable from './components/table/DataTable.vue';
 
 defineProps<{
     patients: Array<Patient>;
+    genders: Array<{ value: string; label: string }>;
 }>();
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -28,7 +29,7 @@ const breadcrumbs: BreadcrumbItem[] = [
                     <p class="text-muted-foreground">Ecco una lista dei pazienti attivi</p>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <Button :as="Link" :href="route('patients.create')"> Aggiungi Paziente</Button>
+                    <Button> Aggiungi Paziente</Button>
                 </div>
             </div>
             <DataTable :data="patients" :columns="columns" />

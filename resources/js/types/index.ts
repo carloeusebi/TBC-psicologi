@@ -1,6 +1,7 @@
 import type { PageProps } from '@inertiajs/core';
-import { useForm } from 'laravel-precognition-vue-inertia';
+import { Form } from 'laravel-precognition-vue-inertia/dist/types';
 import type { LucideIcon } from 'lucide-vue-next';
+import { type Component } from 'vue';
 
 export interface Auth {
     user: User;
@@ -134,7 +135,13 @@ export interface Invoice extends Record<string, unknown> {
     status: string;
 }
 
-export type PrecognitionForm = ReturnType<typeof useForm>;
+export type PrecognitionForm = Form<Record<string, unknown>>;
+
+export interface TableAction {
+    label: string;
+    icon?: Component;
+    onClick: VoidFunction;
+}
 
 export interface LaravelPaginatedResponse<T> {
     data: Array<T>;

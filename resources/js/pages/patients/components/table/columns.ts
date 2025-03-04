@@ -22,16 +22,18 @@ export const columns: ColumnDef<Patient>[] = [
     {
         accessorKey: 'email',
         header: ({ column }) => h(DataTableColumnHeader, { column, title: 'Email' }),
-        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.original.email),
+        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.original.email ?? ''),
         enableSorting: false,
     },
     {
         accessorKey: 'age',
+        id: 'età',
         header: ({ column }) => h(DataTableColumnHeader, { column, title: 'Età' }),
-        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.original.age),
+        cell: ({ row }) => h('span', { class: 'truncate font-medium' }, row.original.age ?? ''),
     },
     {
         accessorKey: 'therapy_start_date',
+        id: 'data inizio terapia',
         header: ({ column }) => h(DataTableColumnHeader, { column, title: 'Data di inizio Terapia' }),
         cell: ({ row }) => h('span', { class: 'truncate font-medium' }, format(row.original.therapy_start_date, ' d MMMM y')),
     },

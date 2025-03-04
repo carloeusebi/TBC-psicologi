@@ -11,14 +11,14 @@ enum Gender: string
     case OTHER = 'other';
 
     /**
-     * @return list<array{ key: string, label: string }>
+     * @return list<array{ value: string, label: string }>
      */
     public static function options(): array
     {
         return [
-            ['key' => self::MALE->value, 'label' => self::MALE->label()],
-            ['key' => self::FEMALE->value, 'label' => self::FEMALE->label()],
-            ['key' => self::OTHER->value, 'label' => self::OTHER->label()],
+            ['value' => self::MALE->value, 'label' => self::MALE->label()],
+            ['value' => self::FEMALE->value, 'label' => self::FEMALE->label()],
+            ['value' => self::OTHER->value, 'label' => self::OTHER->label()],
         ];
     }
 

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { Button } from '@/components/ui/button';
-import { Form } from 'laravel-precognition-vue-inertia';
+import { PrecognitionForm } from '@/types';
 import { TriangleAlert } from 'lucide-vue-next';
 
 const props = withDefaults(
     defineProps<{
         message?: string;
-        form: Form<any>;
+        form: PrecognitionForm;
         resetLabel?: string;
         saveLabel?: string;
         onSubmit?: () => void;
