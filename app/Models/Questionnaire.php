@@ -26,4 +26,14 @@ final class Questionnaire extends Model
     {
         return $this->hasMany(Question::class);
     }
+
+    /**
+     * @return array{is_visible: 'boolean'}
+     */
+    protected function casts(): array
+    {
+        return [
+            'is_visible' => 'boolean',
+        ];
+    }
 }

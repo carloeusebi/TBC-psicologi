@@ -87,7 +87,7 @@ test('user can delete their account', function () {
 
 test('deletes all related records', function () {
     $user = User::factory()->create();
-    Patient::factory(3)->for($user)->create();
+    Patient::factory(3)->for($user)->hasEvaluations()->create();
 
     $response = actingAs($user)
         ->delete(route('profile.destroy'));

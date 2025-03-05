@@ -120,6 +120,16 @@ it('can delete a patient', function () {
     expect(Patient::find($patient->id))->toBeNull();
 });
 
+it('can delete a patient with evaluations', function () {
+    $patient = Patient::factory()->hasEvaluations(3)->create();
+
+    actingAs($patient->user)->delete(route('patients.destroy', $patient))
+        ->assertRedirectToRoute('patients.index')
+        ->assertSessionHas('success', 'Paziente eliminato con successo.');
+
+    expect(Patient::find($patient->id))->toBeNull();
+});
+
 it('deleting another user\'s patient resolves as a not found request', function () {
     $patient = Patient::factory()->create();
 

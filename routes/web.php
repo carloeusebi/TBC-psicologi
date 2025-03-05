@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EvaluationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientController;
 use Illuminate\Foundation\Http\Middleware\HandlePrecognitiveRequests;
@@ -14,7 +15,13 @@ Route::middleware(['auth', 'verified'])->group(function (): void {
     Route::get('dashboard', DashboardController::class)->name('dashboard');
 
     Route::middleware(HandlePrecognitiveRequests::class)->group(function (): void {
-        Route::apiResource('pazienti', PatientController::class)->parameter('pazienti', 'patient')->names('patients');
+        Route::apiResource('pazienti', PatientController::class)
+            ->parameter('pazienti', 'patient')
+            ->names('patients');
+
+        Route::apiResource('valutazioni', EvaluationController::class)
+            ->parameter('valutazioni', 'evaluation')
+            ->names('evaluations');
     });
 });
 

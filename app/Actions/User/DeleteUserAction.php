@@ -12,6 +12,8 @@ final class DeleteUserAction
     public function handle(User $user): ?bool
     {
         return DB::transaction(function () use ($user) {
+            $user->evaluations()->delete();
+
             $user->patients()->delete();
 
             return $user->delete();
