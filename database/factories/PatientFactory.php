@@ -28,7 +28,6 @@ final class PatientFactory extends Factory
             'codice_fiscale' => fake()->codiceFiscale(), // @phpstan-ignore-line
             'therapy_start_date' => fake()->dateTimeBetween('-10 years'),
             'email' => fake()->unique()->safeEmail(),
-            'phone' => fake()->phoneNumber(),
             'weight' => fake()->randomNumber(2),
             'height' => fake()->randomNumber(2),
             'education' => fake()->word(),
