@@ -53,7 +53,9 @@ return new class extends Migration
             }
         } finally {
             fclose($handle);
-            DB::select('SELECT pg_catalog.setval(\'questions_id_seq\', (SELECT MAX(id) FROM questions))');
+            if (Illuminate\Support\Facades\DB::getDriverName() === 'pgsql') {
+                DB::select('SELECT pg_catalog.setval(\'questions_id_seq\', (SELECT MAX(id) FROM questions))');
+            }
         }
     }
 

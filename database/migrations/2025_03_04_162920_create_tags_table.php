@@ -52,7 +52,9 @@ return new class extends Migration
             }
         } finally {
             fclose($handle);
-            DB::select('SELECT pg_catalog.setval(\'tags_id_seq\', (SELECT MAX(id) FROM tags))');
+            if (DB::getDriverName() === 'pgsql') {
+                DB::select('SELECT pg_catalog.setval(\'tags_id_seq\', (SELECT MAX(id) FROM tags))');
+            }
         }
     }
 

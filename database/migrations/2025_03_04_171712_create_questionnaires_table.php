@@ -60,7 +60,9 @@ return new class extends Migration
             }
         } finally {
             fclose($handle);
-            DB::select('SELECT pg_catalog.setval(\'questionnaires_id_seq\', (SELECT MAX(id) FROM questionnaires))');
+            if (Illuminate\Support\Facades\DB::getDatabaseName() === 'pgsql') {
+                DB::select('SELECT pg_catalog.setval(\'questionnaires_id_seq\', (SELECT MAX(id) FROM questionnaires))');
+            }
         }
     }
 
@@ -102,7 +104,9 @@ return new class extends Migration
             }
         } finally {
             fclose($handle);
-            DB::select('SELECT pg_catalog.setval(\'taggables_id_seq\', (SELECT MAX(id) FROM taggables))');
+            if (Illuminate\Support\Facades\DB::getDatabaseName() === 'pgsql') {
+                DB::select('SELECT pg_catalog.setval(\'taggables_id_seq\', (SELECT MAX(id) FROM taggables))');
+            }
         }
     }
 
