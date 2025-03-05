@@ -39,7 +39,7 @@ final class EvaluationController extends Controller
     {
         $this->authorize('create', Evaluation::class);
 
-        $evaluation = $action->handle($request);
+        $evaluation = $action->handle($request->user(), $request->validated());
 
         return to_route('evaluations.show', $evaluation)
             ->with('success', 'Valutazione creata con successo.');
@@ -58,7 +58,7 @@ final class EvaluationController extends Controller
     {
         $this->authorize('update', $evaluation);
 
-        $action->handle($evaluation, $request);
+        $action->handle($evaluation, $request->validated());
 
         return to_route('evaluations.show', $evaluation)
             ->with('success', 'Valutazione modificata con successo.');

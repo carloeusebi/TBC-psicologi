@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Concerns;
 
+use App\Enums\Plan as PlanEnum;
 use App\Models\Plan;
 use Illuminate\Database\Eloquent\Collection;
 use Laravel\Cashier\Billable;
@@ -18,9 +19,9 @@ trait CanSubscribe
 {
     use Billable;
 
-    public function hasPlan(string $plan): bool
+    public function hasPlan(PlanEnum $plan): bool
     {
-        return $this->plan()->name === $plan || $this->plan()->stripe_id === $plan;
+        return $this->plan()->name === $plan;
     }
 
     public function plan(): Plan

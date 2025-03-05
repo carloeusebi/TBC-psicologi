@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace App\Actions\Patient;
 
-use App\Http\Requests\PatientRequest;
 use App\Models\Patient;
 
 final class UpdatePatientAction
 {
-    public function handle(Patient $patient, PatientRequest $request): Patient
+    /**
+     * @param  array<string, mixed>  $data
+     */
+    public function handle(Patient $patient, array $data): bool
     {
-        $patient->update($request->validated());
-
-        return $patient;
+        return $patient->update($data);
     }
 }

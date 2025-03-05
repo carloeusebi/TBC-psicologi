@@ -4,21 +4,22 @@ declare(strict_types=1);
 
 namespace App\Actions\Evaluations;
 
-use App\Http\Requests\EvaluationRequest;
 use App\Models\Evaluation;
 use App\Models\Patient;
+use App\Models\User;
 
 final class CreateEvaluationAction
 {
-    public function handle(EvaluationRequest $request): Evaluation
+    /**
+     * @param  array<string, mixed>  $data
+     */
+    public function handle(User $user, array $data): Evaluation
     {
         /** @var Patient $patient */
-        $patient = Patient::whereBelongsTo($request->user())->findOrFail($request->input('patient_id'));
+        $patient = Patient::whereBelongsTo($user)->findOrFail($data['patient_id']);
 
-        $validated = $request->validated();
+        unset($data['patient_id']);
 
-        unset($validated['patient_id']);
-
-        return $patient->evaluations()->create($validated);
+        return $patient->evaluations()->create($data);
     }
 }

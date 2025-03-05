@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Enums\Plan as PlanEnum;
 use Database\Factories\PlanFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasManyThrough;
-use Laravel\Cashier\Subscription;
-use Laravel\Cashier\SubscriptionItem;
 
 final class Plan extends Model
 {
@@ -31,7 +29,7 @@ final class Plan extends Model
 
     public static function basic(): self
     {
-        return self::where('name', 'Basic')->firstOrFail();
+        return self::whereName(PlanEnum::BASIC)->firstOrFail();
     }
 
     /**
@@ -43,22 +41,8 @@ final class Plan extends Model
     }
 
     /**
-     * @return HasManyThrough<Subscription, SubscriptionItem, $this>
-     */
-    public function subscriptions(): HasManyThrough
-    {
-        return $this->hasManyThrough(
-            Subscription::class,
-            SubscriptionItem::class,
-            'stripe_product',
-            'id',
-            'id',
-            'subscription_id',
-        );
-    }
-
-    /**
      * @return array{
+     *     name: 'App\Enums\Plan',
      *     features: 'json',
      *     abilities: 'json',
      * }
@@ -66,6 +50,7 @@ final class Plan extends Model
     protected function casts(): array
     {
         return [
+            'name' => PlanEnum::class,
             'features' => 'json',
             'abilities' => 'json',
         ];

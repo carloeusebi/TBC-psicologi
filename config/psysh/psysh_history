@@ -6,3 +6,6 @@ q
 DB('taggables')->truncate();
 DB::table('taggables')->truncate();
 q
+$u\040=\040User::first();
+Patient::factory(100)->for($u)->create()
+exit

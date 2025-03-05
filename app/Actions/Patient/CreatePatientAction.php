@@ -4,16 +4,19 @@ declare(strict_types=1);
 
 namespace App\Actions\Patient;
 
-use App\Http\Requests\PatientRequest;
 use App\Models\Patient;
+use App\Models\User;
 
 final class CreatePatientAction
 {
-    public function handle(PatientRequest $request): Patient
+    /**
+     * @param  array<string, mixed>  $data
+     */
+    public function handle(User $user, array $data): Patient
     {
-        return $request->user()->patients()->create(
+        return $user->patients()->create(
             array_merge(
-                $request->validated(),
+                $data,
                 ['therapy_start_date' => today()],
             )
         );

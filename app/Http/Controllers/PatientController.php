@@ -40,7 +40,7 @@ final class PatientController extends Controller
     {
         $this->authorize('create', Patient::class);
 
-        $patient = $action->handle($request);
+        $patient = $action->handle($request->user(), $request->validated());
 
         return to_route('patients.show', $patient)
             ->with('success', 'Paziente creato con successo.');
@@ -60,7 +60,7 @@ final class PatientController extends Controller
     {
         $this->authorize('update', $patient);
 
-        $patient = $action->handle($patient, $request);
+        $action->handle($patient, $request->validated());
 
         return to_route('patients.show', $patient)->with('success', 'Paziente modificato con successo.');
     }

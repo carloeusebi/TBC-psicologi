@@ -30,8 +30,8 @@ final class FetchPlansCommand extends Command
         $products = collect(Cashier::stripe()->products->all(['active' => true])->data);
 
         DB::transaction(function () use ($products, $prices): void {
-            Plan::truncate();
             Price::truncate();
+            Plan::truncate();
 
             $products->each(function (StripeProduct $product) use ($prices): void {
                 $plan = Plan::create([

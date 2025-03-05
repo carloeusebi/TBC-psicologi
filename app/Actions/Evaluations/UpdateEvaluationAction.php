@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace App\Actions\Evaluations;
 
-use App\Http\Requests\EvaluationRequest;
 use App\Models\Evaluation;
 
 final class UpdateEvaluationAction
 {
-    public function handle(Evaluation $evaluation, EvaluationRequest $request): bool
+    /**
+     * @param  array<string, mixed>  $data
+     */
+    public function handle(Evaluation $evaluation, array $data): bool
     {
-        $validated = $request->validated();
+        unset($data['patient_id']);
 
-        unset($validated['patient_id']);
-
-        return $evaluation->update($validated);
+        return $evaluation->update($data);
     }
 }
