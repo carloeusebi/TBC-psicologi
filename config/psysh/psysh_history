@@ -27,3 +27,10 @@ exit
 $u\040=\040User::first();
 Patient::factory(300)->for($u)->create();
 q
+$u\040=\040User::first();
+Patient::factory(100)->for($u)->create();
+q
+Patient::first();
+q
+Patient::first();
+q

@@ -60,7 +60,7 @@ const onSubmit = () => {
                 <PrecognitiveForm :form id="create-form" @submit="onSubmit" class="grid grid-cols-1 gap-2 md:grid-cols-2">
                     <PrecognitiveInput name="first_name" label="Nome" v-model.ucfirst="form.first_name" placeholder="Nome" required />
                     <PrecognitiveInput name="last_name" label="Cognome" v-model.ucfirst="form.last_name" placeholder="Cognome" required />
-                    <PrecognitiveInput name="email" label="Email" v-model.ucfirst="form.email" placeholder="Email" :icon="Mail" />
+                    <PrecognitiveInput name="email" label="Email" v-model="form.email" placeholder="Email" :icon="Mail" />
                     <PrecognitiveInput
                         name="phone"
                         label="Numero di telefono"

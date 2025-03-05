@@ -114,6 +114,7 @@ return [
         'symbols' => ':Attribute deve contenere almeno un simbolo.',
         'uncompromised' => ':Attribute è presente negli archivi dei dati trafugati. Per piacere scegli un valore differente per :attribute.',
     ],
+    'phone' => ':attribute non è un numero di telefono valido.',
     'present' => 'Il campo :attribute deve essere presente.',
     'present_if' => 'Il campo :attribute deve essere presente quando :other è :value.',
     'present_unless' => 'Il campo :attribute deve essere presente a meno che :other non sia :value.',
