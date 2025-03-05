@@ -10,6 +10,10 @@ return new class extends Migration
 {
     public function up(): void
     {
+        Schema::table('patients', function (Blueprint $table) {
+            $table->primary('id');
+        });
+
         Schema::create('evaluations', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->foreignUuid('patient_id')->constrained('patients');
