@@ -1,0 +1,547 @@
+1,1,La mia capacità di affrontare le situazioni dipende dall'aiuto che ricevo,1,1
+2,1,"Quando sono sotto stress, potrei perdere il controllo",1,2
+3,1,"Se qualcosa mi intimorisce, non c'è nulla che io possa fare",1,3
+4,1,Riesco a sfuggire a situazioni preoccupanti soltanto per caso o per fortuna,1,4
+5,1,Posso facilmente eliminare i pensieri ansiosi,0,5
+6,1,Sono in grado di controllare il mio livello di ansia,0,6
+7,1,C'è poco che possa fare per modificare gli eventi che mi preoccupano,1,7
+8,1,Non c'è alcun rapporto tra le mie azioni e la soluzione di una situazione difficile,1,8
+9,1,"Quando qualcosa sta per danneggiarmi, quello che faccio avrà poco effetto",1,9
+10,1,"Di solito, posso rilassarmi quando voglio",0,10
+11,1,"Quando sono sotto stress, non so come potrei reagire",1,11
+12,1,Molti eventi che mi danno ansia sono al di fuori del mio controllo,1,12
+13,1,"Non mi preoccupa il fatto che potrei avere ansia in una situazione difficile, perchè ho fiducia nella mia capacità di gestirei miei stati d'animo",0,13
+14,1,Di solito trovo difficile gestire le situazioni difficili,1,14
+15,1,"Quando sono ansioso, trovo difficile concentrarmi su qualcosa che non sia l'ansia stessa",1,15
+16,2,Rumino sulle mia passate esperienze di rabbia,0,1
+17,2,Rifletto sulle ingiustizie che mi sono state fatte,0,2
+18,2,Continuo a pensare per lungo tempo alle situazioni che mi hanno fatto arrabbiare,0,3
+19,2,Penso a certi avvenimenti di tanto tempo fa e ancora mi fanno arrabbiare,0,4
+20,2,Ho difficoltà a perdonare le persone che mi hanno ferito,0,5
+21,2,"Dopo che una discussione è terminata, continuo a litigare con questa persona nella mia immaginazione",0,6
+22,2,I ricordi di essere stato innervosito affiorano nella mia mente prima di addormentarmi,0,7
+23,2,"Ogni volta che provo rabbia, continuo a pensarci per un po'",0,8
+24,2,Mi sento arrabbiato riguardo a certe cose della mia vita,0,9
+25,2,"Quando qualcuno mi provoca, continuo a domandarmi perchè questo debba essere capitato a me",0,10
+26,2,I ricordi di seccature anche di poco conto mi disturbano per un po',0,11
+27,2,"Quando qualche cosa mi fa arrabbiare, ci torno sopra con la mente più e più volte",0,12
+28,2,Ricostruisco nella mia mente l'episodio di rabbia dopo che si è verificato,0,13
+29,3,Nel complesso sono una persona valida,0,1
+30,3,È più facile arrivare a conoscere me che la maggior parte delle altre persone,0,2
+31,3,Sono fiducioso che gli altri ci saranno quando avrò bisogno di loro,0,3
+32,3,Preferisco dipendere da me stesso invece che dagli altri,0,4
+33,3,Prefresisco stare sulle mie,0,5
+34,3,Chiedere aiuto equivale ad ammettere di essere un fallimento,0,6
+35,3,Il valore di una persona andrebbe valutato in base ai suoi successi,0,7
+36,3,Raggiungere degli obiettivi è più importante che costruire delle relazioni,0,8
+37,3,Dare il massimo è più importante che andare d'accordo con gli atltri,0,9
+38,3,"Se hai un lavoro da fare, non dovrebbe importanti di chi ne avrà un danno",0,10
+39,3,Per me è importante piacere agli altri,0,11
+40,3,Per me è importante evitare di fare delle cose che agli altri non piacciono,0,12
+41,3,Trovo difficile prendere una decisione a meno che non sappia ciò che pensano gli altri,0,13
+42,3,Le mie relazioni con gli altri sono solitamente superficiali,0,14
+43,3,A volte penso di non valere nulla,0,15
+44,3,Ho difficoltà a fidarmi degli altri,0,16
+45,3,Ho difficoltà a dipendere dagli altri,0,17
+46,3,Trovo che gli altri siano riluttanti ad entrare in confidenza quanto io vorrei,0,18
+47,3,Trovo relativamente facile entrare in confidenza con gli altri,0,19
+48,3,Mi fido facilmente degli altri,1,20
+49,3,Mi trovo a mio agio nel dipendere dagli altri,1,21
+50,3,Mi preoccupo che agli altri non importerà di me quanto a me importa di loro,0,22
+51,3,Mi preoccupo quando la gente entra troppo in confidenza,0,23
+52,3,Mi preoccupo di non essere all’altezza degli altri,0,24
+53,3,Ho sentimenti constrastanti circa l'essere in confidenza con gli altri,0,25
+54,3,"Se da un lato voglio entrare in confidenza con gli altri, dall'altro mi sento a disagio",0,26
+55,3,Mi chiedo perchè la gente voglia avere a che fare con me,0,27
+56,3,Per me è veramente importante avere una relazioni stretta,0,28
+57,3,Mi preoccupo molto delle mie relazioni,0,29
+58,3,Mi chiedo come me la caverei senza qualcuno che mi ami,0,30
+59,3,Mi sento fiducioso nelle relazioni con gli altri,0,31
+60,3,Spesso mi sento lasciato in disparte o solo,0,32
+61,3,Spesso mi preoccupo di non riuscire ad entrare in sintonia con gli altri,1,33
+62,3,"Gli altri hanno i loro problemi, per cui non li infastidisco con i miei",0,34
+63,3,"Quando discuto dei miei problemi con gli altri, di solito mi vergogno o mi sento stupido",0,35
+64,3,Sono troppo impegnato in altre attività per dedicare molto tempo alle relazioni,0,36
+65,3,"Se qualcosa mi disturba, gli altri solitamente ne sono consapevoli e preoccupati",0,37
+66,3,Sono fiducioso di essere gradito e rispettato dagli altri,0,38
+67,3,Mi sento frustato quando gli altri non sono disponibili nel momento in cui ne ho bisogno,0,39
+68,3,Gli altri spesso mancano alle mie aspettative,0,40
+89,5,Sono sereno riguardo ciò che provo,1,1
+90,5,Presto attenzione a come mi sento,1,2
+91,5,Vivo le emozioni come travolgenti fuori dal controllo,0,3
+92,5,Non ho idea di come mi sento,0,4
+93,5,Ho difficoltà a dare un senso a ciò che provo,0,5
+94,5,Presto attenzioni alle mie emozioni,1,6
+95,5,So esattamente come mi sento,1,7
+96,5,Mi interessa come mi sento,1,8
+97,5,Sono confuso riguardo a ciò che provo,0,9
+98,5,"Quando sono turbato, riconosco le mie emozioni",1,10
+99,5,"Quando sono turbato, mi arrabbio con me stesso perché mi sento in quel modo",0,11
+100,5,"Quando sono turbato, mi imbarazza sentirmi in quel modo",0,12
+101,5,"Quando sono turbato, ho difficoltà a completare il mio lavoro",0,13
+102,5,"Quando sono turbato, perdo il controllo",0,14
+103,5,"Quando sono turbato, credo che rimarrò in quello stato per molto tempo",0,15
+104,5,"Quando sono turbato, credo che finirò col sentirmi depresso",0,16
+105,5,"Quando sono turbato, credo che i miei sentimenti siano validi e importanti",1,17
+106,5,"Quando sono turbato, faccio fatica a focalizzarmi su altre cose",0,18
+107,5,"Quando sono turbato, mi sento fuori controllo",0,19
+108,5,"Quando sono turbato, posso comunque finire le cose che devo fare",1,20
+109,5,"Quando sono turbato, mi vergogno di me stesso perché mi sento in quel modo",0,21
+110,5,"Quando sono turbato, so che alla fine riesco a trovare un modo per sentirmi meglio",1,22
+111,5,"Quando sono turbato, mi sento debole",0,23
+112,5,"Quando sono turbato, sento di potere avere ancora il controllo dei miei comportamenti",1,24
+113,5,"Quando sono turbato, mi sento in colpa perché mi sento in quel modo",0,25
+114,5,"Quando sono turbato, ho delle difficoltà a concentrarmi",0,26
+115,5,"Quando sono turbato, ho delle difficoltà a controllare i miei comportamenti",0,27
+116,5,"Quando sono turbato, credo che non ci sia niente che possa fare per sentirmi meglio",0,28
+117,5,"Quando sono turbato, mi irrito con me stesso perché mi sento in quel modo",0,29
+118,5,"Quando sono turbato, inizio a sentirmi molto male con me stesso",0,30
+119,5,"Quando sono turbato, credo che crogiolarmi in quello stato sia l'unica cosa che possa fare",0,31
+120,5,"Quando sono turbato, perdo il controllo sui miei comportamenti",0,32
+121,5,"Quando sono turbato, faccio fatica a pensare a qualcosa di diverso",0,33
+122,5,"Quando sono turbato, mi prendo del tempo per riflettere su quello che sto provando veramente",1,34
+123,5,"Quando sono turbato, mi ci vuole molto tempo per sentirmi meglio",0,35
+124,5,"Quando sono turbato, sembra che le mie emozioni siano travolgenti",0,36
+125,6,Mangio dolci e carboidrati senza sentirmi nervosa/o.,1,1
+126,6,Penso che la mia pancia sia troppo grossa.,0,2
+127,6,Mangio quando sono turbata.,0,3
+128,6,Mi rimpinzo di cibo.,0,4
+129,6,Penso alla dieta.,0,5
+130,6,Penso che le mie cosce siano troppo grosse.,0,6
+131,6,Mi sento estremamente colpevole dopo aver mangiato eccessivamente.,0,7
+132,6,Penso che la mia pancia sia proprio delle giuste dimensioni.,1,8
+133,6,Sono terrorizzato/a dall’aumentare di peso.,0,9
+134,6,Mi sento soddisfatto/a della forma del mio corpo.,1,10
+135,6,Esagero o ingigantisco l’importanza del peso corporeo.,0,11
+136,6,Ho fatto delle abbuffate durante le quali sentivo di non potermi fermare.,0,12
+137,6,Mi piace la forma del mio sedere.,1,13
+138,6,Mi tormenta il desiderio di essere più magra/o.,0,14
+139,6,Penso alle abbuffate.,0,15
+140,6,Penso che i miei fianchi siano troppo grossi.,0,16
+141,6,Mangio moderatamente davanti agli altri e poi mi rimpinzo quando sono andati via.,0,17
+142,6,"Se aumento di mezzo chilo, ho paura che continuerò ad aumentare.",0,18
+143,6,Penso che provo a vomitare allo scopo di perdere peso.,0,19
+144,6,Penso che le mie cosce siano proprio delle giuste dimensioni.,1,20
+145,6,Penso di avere un sedere troppo grande.,0,21
+146,6,Mangio e bevo di nascosto.,0,22
+147,6,Penso che i miei fianchi siano proprio delle giuste dimensioni.,1,23
+148,7,L’incertezza non mi permette di avere un’opinione stabile su qualcosa,0,1
+149,7,Una persona indecisa è una persona disorganizzata,0,2
+150,7,L’incertezza rende la vita intollerabile,0,3
+151,7,Non è giusto che nella vita non ci siano garanzie,0,4
+152,7,Non ho pensieri tranquilli se non so che cosa succederà domani,0,5
+153,7,"L’incertezza mi mette a disagio, mi rende ansioso/a o stressato/a",0,6
+154,7,Gli eventi imprevisti mi turbano fortemente,0,7
+155,7,Non avere tutte le informazioni di cui ho bisogno mi rende frustrato/a,0,8
+156,7,Essere incerto/a mi dà la possibilità di prevedere le conseguenze prima che si verifichi un evento prepararmi,0,9
+157,7,Bisogna sempre prevedere gli eventi per evitare sorprese,0,10
+158,7,"Un piccolo evento non previsto può rovinare tutto, anche se tutto era stato pianificato al meglio",0,11
+159,7,"Al momento di agire, l’incertezza mi paralizza",0,12
+160,7,Se sono incerto/a non agisco al meglio,0,13
+161,7,Se sono incerto/a non riesco ad andare avanti,0,14
+162,7,Se sono incerto/a non riesco a funzionare molto bene,0,15
+163,7,"Al contrario di me, sembra che gli altri sappiano sempre a che punto sono nella loro vita",0,16
+164,7,"L’incertezza mi rende vulnerabile, infelice, o triste",0,17
+165,7,Voglio sempre sapere che cosa mi riserverà il futuro,0,18
+166,7,Odio essere colto/a di sorpresa,0,19
+167,7,Il più piccolo dubbio blocca ogni mia azione,0,20
+168,7,Vorrei essere in grado di pianificare ogni cosa in anticipo,0,21
+169,7,Essere incerto/a vuol dire che mi manca sicurezza,0,22
+170,7,Penso che non sia giusto che gli altri sembrino sicuri circa il loro futuro,0,23
+171,7,L’incertezza non mi permette di dormire bene,0,24
+172,7,Mi devo allontanare da situazioni di incertezza,0,25
+173,7,Le situazioni ambigue mi stressano,0,26
+174,7,Non riesco a tollerare di essere indeciso/a sul mio futuro,0,27
+175,8,Quando fallisco divento molto irritabile,0,1
+176,8,Avverto un continuo senso di inferiorità,0,2
+177,8,Mi sento molto frustrato quando non raggiungo gli obiettivi che ho stabilito per me stesso,0,3
+178,8,Sono solitamente a disagio in situazioni sociali nelle quali non so cosa aspettarmi,0,4
+179,8,Spesso mi arrabbio molto con me stesso quando fallisco,0,5
+180,8,Non trascorro molto tempo a preoccuparmi di quello che gli altri potrebbero pensare di me,1,6
+181,8,Quando fallisco divento molto turbato,0,7
+182,8,Se ti apri co gli altri riguardo alle tue debolezze è probabile che continuino a rispettarti,1,8
+183,8,Il fallimento per me è un'esperienza molto dolorosa,0,9
+184,8,Spesso temo che gli altri possano scoprire come sono realmente ed arrabbiarsi con me,0,10
+185,8,Non mi preoccupo troppo spesso della possibilità del fallimento,1,11
+186,8,Sono fiducioso del fatto che la maggior parte delle persone a cui tengo mi accetteranno per quello che sono,1,12
+187,8,Quando non riesco in qualcosa inizio a pensare al mio valore come persona,0,13
+188,8,Se dai agli altri il beneficio del dubbio probabilmente se ne approfitteranno,0,14
+189,8,Mi sento un fallimento quando non faccio le cose bene come vorrei,0,15
+190,8,Solitamente sono a mio agio con le persone che mi chiedono qualcosa su di me,1,16
+191,8,Se fallisco in un'area ciò riflette quanto io sia scarso come persona,0,17
+192,8,Ho paura che se le persone arrivassero a conoscermi troppo bene potrebbero non rispettarmi,0,18
+193,8,Frequentemente paragono me stesso agli obiettivi e agli ideali che mi sono prefissato,0,19
+194,8,Raramente mi vergogno di me stesso,1,20
+195,8,Solitamente essere aperti ed onesti è l’unico modo per ottenere il rispetto degli altri,1,21
+196,8,Ci sono volte in cui è necessario essere alquanto disonesti per ottenere quello che si vuole,0,22
+197,9,I miei genitori hanno/avevano aspettative molto alte su di me,0,1
+198,9,L’organizzazione è molto importante per me,0,2
+199,9,Da bambina/o venivo punito/a se non facevo le cose,0,3
+200,9,"Se non raggiungo il mio massimo livello, è come se finissi per essere una persona di secondo ordine.",0,4
+201,9,I miei genitori non hanno mai provato a capire i miei errori,0,5
+202,9,È importante per me essere totalmente competente in ogni cosa che faccio.,0,6
+203,9,Sono una persona ordinata,0,7
+204,9,Cerco di essere una persona organizzata,0,8
+205,9,"Se non vado bene a scuola o non riesco nel lavoro, sono una persona fallita.",0,9
+206,9,"Se facessi un errore, ci rimarrei male.",0,10
+207,9,I miei genitori desiderano/avano che io fossi il/la migliore in ogni cosa,0,11
+208,9,Mi pongo obiettivi più alti della maggior parte delle persone.,0,12
+209,9,Se qualcuno svolge un compito a scuola o al lavoro meglio di me mi sento come se avessi sbagliato completamente il mio compito.,0,13
+210,9,"Se faccio in parte male una cosa, mi sento a disagio come se l'avessi sbagliata del tutto.",0,14
+211,9,Solo risultati eccezionali vengono/venivano considerati sufficienti dalla mia famiglia,0,15
+212,9,Sono molto brava/o a focalizzare i miei sforzi nel raggiungimento di un obiettivo.,0,16
+213,9,"Anche quando faccio qualcosa con molta attenzione, ho spesso la sensazione che non sia del tutto fatta bene",0,17
+214,9,Non sopporto di non essere il/la migliore in ogni cosa.,0,18
+215,9,Ho obiettivi estremamente elevati.,0,19
+216,9,I miei genitori si aspettano/avano l’eccellenza da me,0,20
+217,9,"Se facessi un errore, probabilmente gli altri penserebbero che io valgo meno.",0,21
+218,9,Non ho mai sentito che avrei potuto soddisfare le aspettative dei miei genitori,0,22
+219,9,"Se non faccio le cose bene come gli altri, allora vuol dire che sono inferiore agli altri.",0,23
+220,9,Mi sembra che gli altri accettino per se stessi obiettivi più bassi dei miei.,0,24
+221,9,"Se non facessi sempre tutto bene, gli altri non mi rispetterebbero.",0,25
+222,9,I miei genitori hanno sempre avuto sul mio futuro aspettative più elevate delle mie,0,26
+223,9,Cerco di essere una persona ordinata,0,27
+224,9,Di solito ho dei dubbi sulle cose semplici che faccio ogni giorno,0,28
+225,9,L’ordine per me è molto importante,0,29
+226,9,Nelle situazioni quotidiane pretendo da me stessa/o risultati più elevati rispetto alla maggior parte delle persone.,0,30
+227,9,Sono una persona organizzata,0,31
+228,9,"Tendo a rimanere indietro nel mio lavoro perché ripeto le cose molte, molte volte",0,32
+229,9,Impiego molto tempo per fare qualcosa nella maniera giusta,0,33
+230,9,"Meno errori faccio, più piacerò agli altri.",0,34
+231,9,Non ho mai sentito di poter raggiungere i livelli pretesi dai miei genitori,0,35
+232,10,Preoccuparmi aiuta a evitare problemi in futuro.,0,1
+233,10,Preoccuparsi troppo è dannoso.,0,2
+234,10,Mi soffermo molto sui miei pensieri.,0,3
+235,10,Rischio di ammalarmi perché mi preoccupo troppo.,0,4
+236,10,Sono consapevole di come lavora la mia mente quando rifletto su un problema.,0,5
+237,10,"Se ho un pensiero negativo sul futuro, non faccio nulla per evitarlo e questo pensiero si realizza, mi attribuisco la colpa.",0,6
+238,10,Ho bisogno di preoccuparmi per organizzarmi.,0,7
+239,10,Ho poca fiducia nella mia capacità di ricordare parole e nomi.,0,8
+240,10,I miei pensieri negativi rimangono anche se cerco di liberarmene.,0,9
+241,10,Preoccuparmi è utile per trovare soluzioni.,0,10
+242,10,Non posso ignorare le mie preoccupazioni.,0,11
+243,10,Controllo attentamente i miei pensieri.,0,12
+244,10,Devo avere sempre il controllo dei miei pensieri.,0,13
+245,10,Talvolta la mia memoria mi inganna.,0,14
+246,10,Preoccuparsi può farmi diventare pazzo.,0,15
+247,10,Sono sempre attento a cosa sto pensando.,0,16
+248,10,Ho poca memoria.,0,17
+249,10,Dedico molta attenzione al modo in cui la mia mente lavora.,0,18
+250,10,Preoccuparmi aiuta ad affrontare le difficoltà.,0,19
+251,10,Non riuscire a controllare i propri pensieri è segno di debolezza.,0,20
+252,10,Quando comincio a preoccuparmi di qualcosa non riesco più a smettere.,0,21
+253,10,Verrò punito se non riuscirò a eliminare certi pensieri.,0,22
+254,10,Preoccuparmi aiuta a risolvere i problemi.,0,23
+255,10,Non ho molta fiducia nella mia capacità di ricordare luoghi.,0,24
+256,10,È male avere certi pensieri.,0,25
+257,10,Non ho fiducia nella mia memoria.,0,26
+258,10,"Se non controllo i pensieri, non riesco a controllare il mio comportamento",0,27
+259,10,Ho bisogno di preoccuparmi per lavorare meglio.,0,28
+260,10,Ho poca fiducia nella mia capacità di ricordare cosa ho fatto.,0,29
+261,10,Rifletto per capire come mai ho certi pensieri.,0,30
+262,11,Vado d’accordo con gli altri.,1,1
+263,11,Mi stanco subito.,0,2
+264,11,Nulla mi interessa.,0,3
+265,11,Mi sento stressata/o sul lavoro o a scuola.,0,4
+266,11,Mi do la colpa di quello che succede.,0,5
+267,11,Sono irritata/o.,0,6
+268,11,Sono scontenta/o del mio matrimonio o rapporto di coppia. (se non ha rapporti scelga MAI).,0,7
+269,11,Ho pensato di farla finita.,0,8
+270,11,Mi sento debole.,0,9
+271,11,Sono impaurita/o.,0,10
+272,11,"Quando bevo troppo, la mattina dopo devo bermi un bicchiere solo per mettermi in moto. (se non beve scelga MAI)",0,11
+273,11,Sono soddisfatta/o del lavoro o della scuola.,1,12
+274,11,Sono felice.,1,13
+275,11,Lavoro o studio troppo.,0,14
+276,11,Non valgo nulla.,0,15
+277,11,La mia famiglia mi dà preoccupazione.,0,16
+278,11,Ho una vita sessuale insoddisfacente.,0,17
+279,11,Mi sento sola/o.,0,18
+280,11,Litigo spesso.,0,19
+281,11,Sono amata/o e ben accolta/o.,1,20
+282,11,Mi godo il tempo libero.,1,21
+283,11,Faccio fatica a concentrarmi.,0,22
+284,11,Non nutro speranze per il futuro.,0,23
+285,11,Mi piaccio.,1,24
+286,11,Non riesco a scacciare i pensieri che mi turbano.,0,25
+287,11,Sono stufo della gente che mi critica perché bevo o prendo droghe (se non applicabile scelga MAI).,0,26
+288,11,Digerisco male.,0,27
+289,11,Non lavoro o studio come ero abituato prima.,0,28
+290,11,Ho il cuore in gola.,0,29
+291,11,Faccio fatica ad andare d'accordo con amici e conoscenti.,0,30
+292,11,Sono contenta della vita.,1,31
+293,11,Sono finito nei guai a scuola o sul lavoro perché bevo (o prendo droghe). (se non è applicabile scelga MAI).,0,32
+294,11,Sta per succedermi qualcosa di brutto.,0,33
+295,11,Mi fanno male i muscoli.,0,34
+296,11,"Ho paura degli spazi aperti, di guidare, di andare in autobus, in metropolitana, etc.",0,35
+297,11,Sono nervoso.,0,36
+298,11,I miei rapporti amorosi sono del tutto soddisfacenti.,1,37
+299,11,Non mi pare di fare bene a scuola o sul lavoro.,0,38
+300,11,Sono troppo in disaccordo sul lavoro o a scuola.,0,39
+301,11,C'è qualcosa di sbagliato con la mia testa.,0,40
+302,11,Faccio fatica ad addormentarmi o a restare addormentato.,0,41
+303,11,Sono triste.,0,42
+304,11,Sono soddisfatto dei miei rapporti con gli altri.,1,43
+305,11,Sono così furioso a scuola o sul lavoro da commettere atti irreparabili.,0,44
+306,11,Ho mal di testa.,0,45
+307,12,Mi pare che le mie mani siano sporche quando tocco il denaro.,0,1
+308,12,"Penso che anche il contatto più leggero con secrezioni corporee (saliva, urina, fiato, ecc.) possa contaminare i miei vestiti e farmi del male.",0,2
+309,12,Trovo difficile toccare un oggetto quando so che è stato toccato da uno straniero o da particolari persone.,0,3
+310,12,Trovo difficile toccare dei rifiuti o oggetti sporchi.,0,4
+311,12,Evito di usare i bagni pubblici perché temo le malattie o la contaminazione.,0,5
+312,12,Evito di usare telefoni pubblici perché temo il contagio o le malattie.,0,6
+313,12,Lavo le mani più spesso e più a lungo del necessario.,0,7
+314,12,Qualche volta mi devo lavare o pulire semplicemente perché penso che potrei essere sporco o “contaminato”.,0,8
+315,12,Quando tocco qualcosa che penso che sia “contaminato” devo immediatamente lavarmi o pulirmi.,0,9
+316,12,"Se un animale mi tocca, mi sento sporco e devo immediatamente lavarmi o cambiare i vestiti.",0,10
+317,12,"Mi sento costretto a seguire un particolare ordine quando mi vesto, mi svesto e mi lavo.",0,11
+318,12,"Prima di andare a dormire, devo pensare a determinate cose in un certo ordine.",0,12
+319,12,"Prima di entrare nel letto, devo appendere o mettere in ordine i miei vestiti in un modo particolare.",0,13
+320,12,Devo fare le stesse cose più volte prima di pensare che siano fatte correttamente.,0,14
+321,12,Tendo a continuare a controllare le cose più del necessario.,0,15
+322,12,"Controllo e ricontrollo i rubinetti/interruttori del gas, dell’acqua e della luce dopo averli chiusi.",0,16
+323,12,"Torno a casa a controllare porte, finestre, armadi, ecc. per assicurarmi che siano chiusi correttamente.",0,17
+324,12,"Continuo a controllare dettagliatamente schede, documenti, assegni, ecc. per essere sicuro di averli compilati correttamente.",0,18
+325,12,"Continuo ad andare a controllare che fiammiferi, sigarette, ecc. siano spenti.",0,19
+326,12,Quando maneggio denaro lo conto e riconto più volte.,0,20
+327,12,Controllo più volte e attentamente le lettere prima di inviarle.,0,21
+328,12,"A volte non sono sicuro di aver fatto certe cose, quando in realtà so di averle fatte.",0,22
+329,12,"Quando leggo, ho l’impressione di aver saltato qualcosa di importante e devo tornare indietro e rileggermi il passaggio almeno due o tre volte.",0,23
+330,12,Mi immagino conseguenze catastrofiche come risultato di momenti di distrazione e piccoli errori che commetto.,0,24
+331,12,Penso o rimugino a lungo riguardo l'aver fatto male a qualcuno senza saperlo.,0,25
+332,12,"Quando sento parlare di un disastro, penso che in qualche modo sia colpa mia.",0,26
+333,12,Qualche volta mi preoccupo a lungo e senza alcuna ragione di essermi fatto del male o di avere una malattia.,0,27
+334,12,"Divento agitato e preoccupato alla vista di coltelli, pugnali, e altri oggetti appuntiti.",0,28
+335,12,Quando sento parlare di un suicidio o di un crimine mi agito per un lungo periodo e trovo difficile smettere di pensarci.,0,29
+336,12,Mi invento inutili preoccupazioni riguardanti germi e malattie.,0,30
+337,12,Quando guardo in basso da un ponte o una finestra molto elevata sento l’impulso di lanciarmi nel vuoto.,0,31
+338,12,Quando vedo arrivare un treno a volte penso che potrei gettarmi sotto le ruote.,0,32
+339,12,In certi momenti mi viene la tentazione di spogliarmi in pubblico.,0,33
+340,12,"Mentre guido, a volte sento l’impulso di dirigere l’auto contro qualcuno o qualcosa.",0,34
+341,12,Vedere delle armi mi eccita e mi fa venire in mente pensieri violenti.,0,35
+342,12,A volte sento il bisogno di rompere o danneggiare oggetti senza alcuna ragione.,0,36
+343,12,A volte ho l’impulso di rubare le cose degli altri perfino se non mi sono di alcuna utilità.,0,37
+344,12,A volte provo una tentazione quasi irresistibile di rubare qualcosa al supermercato.,0,38
+345,12,A volte ho l’impulso di far del male a bambini e animali indifesi.,0,39
+346,13,"Se non ho tempo di fare tutto, non me ne preoccupo",1,1
+347,13,Le mie preoccupazioni mi opprimono,0,2
+348,13,Non tendo a preoccuparmi delle cose,1,3
+349,13,Molte situazioni mi preoccupano,0,4
+350,13,"So che non dovrei preoccuparmi delle cose, ma non posso proprio farci niente",0,5
+351,13,"Quando sono sotto pressione, mi preoccupo parecchio",0,6
+352,13,Sono sempre preoccupato per qualcosa,0,7
+353,13,Riesco facilmente ad allontanare le preoccupazioni dalla testa,1,8
+354,13,"Non appena ho terminato un compito, incomincio a preoccuparmi per tutte le altre cose che ho da fare",0,9
+355,13,Non mi preoccupo mai di alcunché,1,10
+356,13,"Quando non posso fare più nulla per risolvere un problema, smetto di preoccuparmi",1,11
+357,13,Per tutta la vita sono stata/o una persona preoccupata,0,12
+358,13,Mi rendo conto che mi sto preoccupando per le cose,0,13
+359,13,"Una volta che ho iniziato a preoccuparmi, non riesco a smettere",0,14
+360,13,Sono continuamente preoccupato/a,0,15
+361,13,Mi preoccupo dei progetti finché non sono completamente realizzati,0,16
+362,14,Eventi inaspettati mi hanno sconvolto,0,1
+363,14,Non sono stato capace di controllare cose importanti verificatesi durante il corso della giornata,0,2
+364,14,Mi sono sentito particolarmente nervoso e “stressato”,0,3
+365,14,Sono stato capace di gestire un problema,1,4
+366,14,Sapevo di fare la cosa giusta,1,5
+367,14,Ho avuto la sensazione di non riuscire a star dietro a tutte le cose che dovevo fare,0,6
+368,14,Ero in grado di controllare la mia irritabilità,1,7
+369,14,Mi controllavo in tutte le situazioni,1,8
+370,14,Mi sono arrabbiato perché non riuscivo a controllare le cose,0,9
+371,14,Mi sono sentito in difficoltà nell’affrontare cose difficili,0,10
+372,15,Spesso mi sento responsabile delle cose che vanno male.,0,1
+373,15,"Se non agisco quando credo di essere in pericolo, mi biasimo per tutte le conseguenze che potrebbero verificarsi.",0,2
+374,15,Sono così sensibile che mi sento responsabile delle cose che vanno male.,0,3
+375,15,Se penso cose cattive è un male come se facessi cose cattive.,0,4
+376,15,Mi preoccupo molto delle conseguenze di ciò che faccio o non faccio.,0,5
+377,15,Secondo me non agire per prevenire un disastro è un male come causare il disastro stesso.,0,6
+378,15,"Se so che è possibile che si verifichi un danno cerco sempre di prevenirlo, per quanto impossibile possa sembrare.",0,7
+379,15,"Devo sempre pensare alle conseguenze delle azioni, anche le più piccole.",0,8
+380,15,Spesso mi prendo la responsabilità di colpe che gli altri non mi attribuiscono.,0,9
+381,15,Ogni cosa che faccio può causare gravi problemi.,0,10
+382,15,Sono spesso vicino a chi fa danni.,0,11
+383,15,Devo proteggere gli altri dai torti.,0,12
+384,15,Non devo mai fare agli altri neanche il più piccolo torto.,0,13
+385,15,Verrò condannato per le mie azioni.,0,14
+386,15,"Se posso avere anche una minima influenza sulle cose che vanno male, allora devo agire per prevenirle.",0,15
+387,15,Secondo me non agire quando vi è la minima possibilità che un disastro avvenga è male come causare il disastro stesso.,0,16
+388,15,"Per me, anche una minima trascuratezza è imperdonabile quando può danneggiare gli altri.",0,17
+389,15,In ogni tipo di situazione quotidiana la mia inerzia può causare tanti danni come una deliberata cattiva azione.,0,18
+390,15,Anche se il danno è davvero l’unica possibilità cerco sempre di evitarlo a tutti i costi.,0,19
+391,15,Quando credo di aver procurato un danno non posso perdonarmelo.,0,20
+392,15,Molte delle mie azioni passate hanno avuto lo scopo di prevenire danni verso gli altri.,0,21
+393,15,Devo essere sicuro che gli altri siano protetti da tutte le conseguenze delle cose che faccio.,0,22
+394,15,Gli altri non devono fidarsi del mio giudizio.,0,23
+395,15,"Se non posso essere infallibile sono degno di rimprovero, sento che devo essere rimproverato.",0,24
+396,15,Se sto sufficientemente attento posso prevenire qualche incidente dannoso.,0,25
+397,15,Spesso penso che accadranno cose negative se non starò abbastanza attento.,0,26
+398,16,Pensi a quanto ti senti solo,0,1
+399,16,Pensi: “Non riuscirò a fare il mio lavoro se non mi libero di questo malessere”.,0,2
+400,16,Pensi al tuo dolore e alle tue sensazioni di stanchezza e malessere.,0,3
+401,16,Pensi a quanto sia difficile concentrarsi.,0,4
+402,16,Pensi “cosa ho fatto per meritarmi questo?”,0,5
+403,16,Pensi a quanto ti senti passivo e privo di motivazione.,0,6
+404,16,Analizzi gli eventi recenti per provare a capire perché sei depresso.,0,7
+405,16,Pensi al fatto che non ti sembra di sentire più niente.,0,8
+406,16,Pensi: “Perché non riesco a mettermi in moto?”,0,9
+407,16,Pensi: “Perché reagisco sempre in questo modo?”,0,10
+408,16,Vai via solo/a e pensi al perché ti senti in questo modo.,0,11
+409,16,Scrivi cosa stai pensando e lo analizzi.,0,12
+410,16,"Pensi a una situazione recente, desiderando che fosse andata meglio.",0,13
+411,16,Pensi: “non riuscirò a concentrarmi se continuo a sentirmi in questo modo”.,0,14
+412,16,Pensi: “perché io ho problemi che le altre persone non hanno?”.,0,15
+413,16,Pensi “perché non riesco a gestire meglio ciò che mi accade?”.,0,16
+414,16,Pensi a quanto ti senti triste.,0,17
+415,16,"Pensi a tutte le tue manchevolezze, difetti, colpe ed errori.",0,18
+416,16,Pensi al fatto che non ti senti più di fare nulla.,0,19
+417,16,Analizzi la tua personalità per cercare di capire perché sei depresso/a.,0,20
+418,16,Girovaghi solo in qualche posto per pensare alle tue emozioni.,0,21
+419,16,Pensi a quanto sei arrabbiato con te stesso/a.,0,22
+420,17,,0,1
+421,17,,0,2
+422,17,,0,3
+423,17,,0,4
+424,17,,0,5
+425,17,,0,6
+426,17,,0,7
+427,17,,0,8
+428,17,,0,9
+429,17,,0,10
+430,17,,0,11
+431,17,,0,12
+432,17,,0,13
+433,17,,0,14
+434,17,,0,15
+435,17,,0,16
+436,17,,0,17
+437,17,,0,18
+438,17,,0,19
+439,17,,0,20
+440,17,,0,21
+580,23,Intorpidimento o formicolio,0,1
+581,23,Vampate di calore,0,2
+582,23,Gambe vacillanti,0,3
+583,23,Incapacità a rilassarsi,0,4
+584,23,Paura che qualcosa di molto brutto possa accadere,0,5
+585,23,Vertigini o sensazione di stordimento,0,6
+586,23,Batticuore,0,7
+587,23,Umore instabile,0,8
+588,23,Essere terrorizzati,0,9
+589,23,Sentirsi Agitati,0,10
+590,23,Sensazione di Soffocamento,0,11
+591,23,Mani che tremano,0,12
+592,23,Agitazione in tutto il corpo,0,13
+593,23,Paura di perdere il controllo,0,14
+594,23,Respiro affannoso,0,15
+595,23,Paura di morire,0,16
+596,23,Sentirsi impauriti,0,17
+597,23,Dolori intestinali o di stomaco,0,18
+598,23,Sentirsi svenire,0,19
+599,23,Sentirsi arrossire,0,20
+600,23,Sentirsi sudati (non a causa del calore),0,21
+601,24,Ha evitato dei lavori o dei compiti che prevedevano che lei avesse a che fare con numerose persone?,0,1
+602,24,"Evita di fare amicizia con le persone, a meno di non essere sicuro/a di piacere a loro?",0,2
+603,24,Trova difficile essere “aperto/a” anche con le persone con cui è in confidenza?,0,3
+604,24,Si preoccupa spesso di venire criticato/a o rifiutato/a nelle situazioni sociali?,0,4
+605,24,Di solito sta in silenzio quando incontra persone che non conosce?,0,5
+606,24,"Pensa di non essere abile, brillante o attraente come la maggior parte delle persone?",0,6
+607,24,Ha paura di provare cose che potrebbero rappresentare una sfida o di provare qualsiasi cosa nuova?,0,7
+608,24,"È difficile per lei prendere decisioni quotidiane, per esempio, come vestirsi o cosa ordinare al ristorante, senza i consigli o le rassicurazioni degli altri?",0,8
+609,24,"Dipende dalle altre persone per gestire aree importanti della sua vita, come finanze, cura dei figli, o progetti di vita?",0,9
+610,24,"Trova difficile esprimere il suo disaccordo alle persone, anche quando pensa che stiano sbagliando?",0,10
+611,24,Trova difficile iniziare dei progetti o fare le cose da solo/a?,0,11
+612,24,Per lei è così importante che gli altri si prendano cura di lei da essere disposto/a a fare delle cose sgradevoli o irrazionali per loro?,0,12
+613,24,Di solito si sente a disagio quando è da solo/a,0,13
+614,24,"Quando una relazione stretta finisce, sente subito il bisogno di trovare qualcun altro che si prenda cura di lei?",0,14
+615,24,Si preoccupa molto di essere lasciato/a da solo/a a badare a se stesso/a?,0,15
+616,24,"È il tipo di persona che si fissa sui dettagli, sull’ordine, e sull’organizzazione e che ama fare elenchi e programmi dettagliati?",0,16
+617,24,Ha problemi a terminare le cose perché impiega troppo tempo nel cercare di farle perfettamente?,0,17
+618,24,È molto dedito/a al suo lavoro o all’essere produttivo/a?,0,18
+619,24,Ha dei parametri molto alti riguardo a ciò che è giusto e ciò che è sbagliato?,0,19
+620,24,"Ha dei problemi a buttar via le cose, perché, un giorno potrebbero tornare utili?",0,20
+621,24,"È difficile per lavorare con altre persone, o chiedere agli altri di fare delle cose, a meno che non accettino di fare cose esattamente nel modo in cui vuole lei?",0,21
+622,24,È difficile per lei spendere del denaro per sé o per altre persone?,0,22
+623,24,"Una volta che ha fatto dei progetti, per lei è difficile apportare dei cambiamenti?",0,23
+624,24,Altre persone le hanno detto che è testardo/a?,0,24
+625,24,"Ha spesso la sensazione che le persone la stiano usando, danneggiando o che le stiano mentendo?",0,25
+626,24,"È una persona molto riservata, che raramente si confida con le altre persone?",0,26
+627,24,Pensa che sia meglio fare in modo che le persone non sappiano troppo di lei perché potrebbero usarlo contro di lei?,0,27
+628,24,Ha spesso la sensazione che le altre persone la stiano minacciando o insultando per via delle cose che dicono o fanno?,0,28
+629,24,Lei è qul tipo di persona che porta rancore o impiega molto tempo per perdonare le persone che l’hanno insultata o offesa?,0,29
+630,24,Ci sono molte persone che lei non può perdonare perché le hanno fatto o detto qualcosa molto tempo fa?,0,30
+631,24,Spesso si arrabbia o attacca violentemente chi la critica o la offende in qualche modo?,0,31
+632,24,Ha sospettato spesso che il suo coniuge o partner le sia stato infedele?,0,32
+633,24,"Quando si trova in pubblico e vede delle persone che parlano, spesso pensa che stiano parlando di lei?",0,33
+634,24,"Quando è in mezzo alla gente, ha spesso la sensazione che la stiano osservando o fissando?",0,34
+635,24,Ha spesso la sensazione che le parole di una canzone o qualcosa in un film p in TV abbiano un significato speciale rivolto a lei in particolare?,0,35
+636,24,È una persona superstiziosa?,0,36
+637,24,Ha mai ritenuto di poter fare avvenire delle cose semplicemente esprimendo un desiderio o pensandoci?,0,37
+638,24,Ha avuto esperienze personali con il soprannaturale?,0,38
+639,24,Ha un “sesto senso” che le consente di conoscere e predire gli eventi?,0,39
+640,24,"Ha spesso la sensazione che ogni cosa sia irreale, di essere staccato/a dal suo corpo o dalla sua mente, o di essere un osservatore/trice esterno/a sei suoi pensieri o movimenti?",0,40
+641,24,Vede spesso delle cose che altre persone non vedono?,0,41
+642,24,Sente spesso una voce pronunciare piano il suo nome?,0,42
+643,24,"Ha avuto la sensazione che una qualche persona o forza fosse vicino a lei, anche se non poteva vedere nessuno?",0,43
+644,24,Ci sono pochissime persone con cui lei si sente in intimità all’esterno della cerchia dei suoi familiari più stretti?,0,44
+645,24,Si sente spesso in apprensione quando è circondato da persone che non conosce bene?,0,45
+647,24,Per lei NON è importante avere degli amici o delle relazioni sentimentali o far parte della sua famiglia?,0,46
+648,24,"Quasi sempre preferirebbe fare le cose da solo/a, piuttosto che con altre persone?",0,47
+649,24,Ha poco o nessun interesse nell’avere esperienze sessuali con un’altra persona?,0,48
+650,24,Ci sono davvero pochissime cose che le danno molto piacere?,0,49
+651,24,Non le importa di ciò che la gente pensa di lei?,0,50
+652,24,"Raramente prova emozioni forti, come per esempio essere molto arrabbiato/a o sentirsi allegro/a?",0,51
+653,24,Le piace essere al centro dell’attenzione?,0,52
+654,24,Tende a giocare a sedurre molto?,0,53
+655,24,Si trova spesso “a provarci” con le persone?,0,54
+656,24,"Cerca di attirare l’attenzione su di sé, grazie al suo modo di vestire o al suo aspetto fisico?",0,55
+657,24,Tende ad essere una persona molto teatrale nelle sue azioni e nel suo linguaggio?,0,56
+658,24,"È più emotivo/a della maggior parte delle persone, per esempio, singhiozza quando ascolta una storia triste?",0,57
+659,24,Cambia spesso idea sulle cose in base alle persone con cui è o a quello che ha appena letto o visto in TV?,0,58
+660,24,"Pensa spesso che anche persone che forniscono un servizio, come il suo idraulico, il suo meccanico e il suo dottore, siano suoi buoni amici?",0,59
+661,24,"È più importante, più talentuoso/a o più di successo della maggior parte delle altre persone?",0,60
+662,24,Le hanno detto che un’opinione troppo alta di sé?,0,61
+663,24,"Pensa molto al potere, al successo, o al riconoscimento che si aspetta che un giorno sarà suo?",0,62
+664,24,Pensa spesso alla perfetta storia d’amore che un giorno vivrà?,0,63
+665,24,Quando ha un problema insiste quasi sempre per contattare i massimi specialisti?,0,64
+666,24,Cerca di passare il suo tempo solo con le persone importanti o influenti?,0,65
+667,24,Per lei è importante che la gente in qualche modo le presti attenzione o la ammiri?,0,66
+668,24,Pensa di essere il tipo di persona che merita un trattamento di riguardo oppure pensa che le altre persone dovrebbero fare automaticamente quello che lei vuole?,0,67
+669,24,Deve mettere spesso i suoi bisogni davanti a quelli delle altre persone?,0,68
+670,24,Gli altri si sono lamentati del fatto che lei si approfitta delle persone?,0,69
+671,24,"Generalmente, ritiene che i bisogni o i sentimenti degli altri non siano davvero un suo problema?",0,70
+672,24,Trova spesso che i problemi delle altre persone siano noiosi?,0,71
+673,24,Le altre persone si sono lamentate del fatto che lei non le ascolta o non si interessa ai loro sentimenti?,0,72
+674,24,"Quando vede qualcuno che ha successo, ritiene che lei lo meriti più di lui/lei?",0,73
+675,24,Pensa che gli altri siano spesso invidiosi di lei?,0,74
+676,24,Pensa che ci siano pochissime persone che sono degne del suo tempo e della sua attenzione?,0,75
+677,24,Le altre persone si sono lamentate del fatto che lei si comporta in modo troppo arrogante e prepotente?,0,76
+678,24,"Spesso si è agitato/a molto, quando ha pensato che qualcuno cui lei teneva davvero stesse per lasciarla?",0,77
+679,24,Le relazioni con le persone cui tiene davvero hanno molti alti e bassi?,0,78
+680,24,Il suo senso di lei sia cambia spesso in modo radicale?,0,79
+681,24,"È diverso/a con persone diverse o in situazioni differenti, tanto che a volte non sa realmente chi sia?",0,80
+682,24,"Ci sono stati molti cambiamenti improvvisi ne i suoi scopi, progetti di carriera, credenze religiose, e così via?",0,81
+683,24,Ci sono stai cambiamenti improvvisi nella sua tipologia di amici o nella sua identità sessuale?,0,82
+684,24,Ha fatto spesso delle cose impulsivamente?,0,83
+685,24,"Ha cercato di farsi del male o di uccidersi, oppure ha minacciato di farlo?",0,84
+686,24,"Si è mai tagliato/a, bruciato/a, o graffiato/a intenzionalmente?",0,85
+687,24,"Il suo umore cambia spesso nell’arco di un solo giorno, sulla base di quello che sta accadendo nella sua vita?",0,86
+688,24,Avverte spesso un senso di vuoto interiore?,0,87
+689,24,Le capita spesso di avere esplosioni di collera o di diventare così arrabbiato/a da perdere il controllo?,0,88
+690,24,"Quando si arrabbia, picchia le persone oppure scaglia degli oggetti?",0,89
+691,24,La fanno arrabbiare molto anche cose da poco?,0,90
+692,24,"Quando si agita molto, diventa sospettoso/a verso gli altri o si sente distaccato/a dal suo corpo o sente che le cose sono irreali?",0,91
+693,24,"Prima dei 15 anni ha fatto il/la prepotente con, minacciato, o spaventato altri ragazzini?",0,92
+694,24,Prima dei 15 anni ha dato inizio a scontri fisici?,0,93
+695,24,"Prima dei 15 anni ha ferito o minacciato qualcuno con un’arma, come un bastone, una pietra, una bottiglia rotta, un coltello o un’arma da fuoco?",0,94
+696,24,Prima dei 15 anni ha fatto delle cose crudeli a qualcuno causandogli dolore fisico o sofferenza?,0,95
+697,24,"Prima dei 15 anni ha fatto del male, di proposito, a degli animali?",0,96
+698,24,"Prima dei 15 anni ha rubato, scippato o preso in modo violento qualcosa o qualcuno minacciandolo/a?",0,97
+699,24,Prima dei 15 anni ha costretto qualcuno a fare qualcosa di sessuale?,0,98
+700,24,Prima dei 15 anni ha appiccato dei fuochi?,0,99
+701,24,Prima dei 15 anni ha danneggiato deliberatamente cose che non erano sue?,0,100
+702,24,"Prima dei 15 anni è entrato/a con la forza in una casa, in un edificio, o in un’automobile?",0,101
+703,24,Prima dei 15 anni ha detto molte bugie o ha ingannato altre persone per ottenere qualcosa che voleva o per evitare di fare qualcosa?,0,102
+704,24,Prima dei 15 anni ha rubato o compiuto furti o contraffatto la firma di qualcuno per denaro?,0,103
+705,24,"Prima dei 15 anni è scappato di casa, stando fuori tutta la notte?",0,104
+706,24,"Prima dei 13 anni stava spesso fuori fino a molto tardi, ben dopo l’ora in cui avrebbe dovuto essere a casa?",0,105
+707,24,Prima dei 13 anni ha marinato spesso la scuola?,0,106
