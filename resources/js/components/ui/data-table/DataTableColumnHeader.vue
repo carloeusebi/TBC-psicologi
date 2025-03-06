@@ -71,6 +71,13 @@ export default {
     </div>
 
     <div v-else :class="$attrs.class">
-        {{ title }}
+        <Button
+            variant="ghost"
+            size="sm"
+            class="-ml-3 text-foreground h-8 data-[state=open]:bg-accent"
+            disabled
+        >
+            <span>{{ title }}</span>
+        </Button>
     </div>
 </template>
