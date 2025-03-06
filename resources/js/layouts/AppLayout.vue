@@ -15,7 +15,9 @@ withDefaults(defineProps<Props>(), {
 
 <template>
     <AppLayout :breadcrumbs="breadcrumbs">
-        <slot />
+        <div class="h-full max-w-[100vw] flex-1 flex-col space-y-8 p-2 md:flex md:p-4 lg:p-8">
+            <slot />
+        </div>
         <ConfirmDialog />
         <Toaster rich-colors position="top-right" />
     </AppLayout>
