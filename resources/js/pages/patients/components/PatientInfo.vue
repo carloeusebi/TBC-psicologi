@@ -53,6 +53,7 @@ const onFormSubmit = () => {
     form.submit({
         preserveScroll: true,
         onStart: () => {
+            dismissFormToast();
             toast.promise(promise, {
                 loading: 'Salvataggio in corso...',
                 success: (message: string) => message,
